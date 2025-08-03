@@ -1,11 +1,18 @@
 
 # Metadata
-AUTHOR = 'Eduardo Gade Gusmao'
 SITENAME = 'Gusmao Lab'
+SITESUBTITLE = 'Computational Biology • AI • Writing'
 SITEURL = ""
 TIMEZONE = 'America/Bahia'
 DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%d %B %Y'
+THEME = 'themes/Flex'
+
+# SideBar Bio
+AUTHOR = 'Eduardo Gade Gusmao'
+TAGLINE = 'Bioinformatician, Professor and AI/ML/DL Researcher'
+SITELOGO = '/images/avatar.png'  # optional
+FAVICON = '/images/favicon.ico'  # optional
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -18,7 +25,12 @@ AUTHOR_FEED_RSS = None
 PATH = "content"
 ARTICLE_PATHS = ["blog"]
 PAGE_PATHS = ["pages"]
-STATIC_PATHS = ["extra/CV.pdf"]
+
+# Static paths
+STATIC_PATHS = ['images', 'extra/CV.pdf']
+EXTRA_PATH_METADATA = {
+    'extra/CV.pdf': {'path': 'CV.pdf'},
+}
 
 # Site structure
 PAGE_URL = '{slug}/'
@@ -27,22 +39,50 @@ ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 
 # Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ('LinkedIn', 'https://www.linkedin.com/in/gusmao/'),
-    ('GitHub', 'https://github.com/eggduzao'),
-)
+# LINKS = (
+#     ("Pelican", "https://getpelican.com/"),
+#     ("Python.org", "https://www.python.org/"),
+#     ("Jinja2", "https://palletsprojects.com/p/jinja/"),
+# )
 
-# Social widget
+# Social links (use your links or placeholders)
 SOCIAL = (
+    ('GitHub', 'https://github.com/eggduzao'),
+    ('LinkedIn', 'https://www.linkedin.com/in/XXXXXXXX/'),
+    ('ResearchGate', 'https://www.linkedin.com/in/XXXXXXXX/'),
+    ('ORCID', 'https://orcid.org/0000-0000-0000-0000'),
+    ('Instagram', 'https://twitter.com/your-handle'),
     ('Email', 'mailto:contact@gusmaolab.org'),
     ('RSS', '/feeds/all.atom.xml'),
 )
+
+# Menu items
+MAIN_MENU = True
+MENUITEMS = (
+    ('About', '/about.html'),
+    ('Projects', '/projects.html'),
+    ('Writings', '/writing.html'),
+    ('Blog', '/blog.html'),
+)
+
+# Enable Flex features
+USE_FOLDER_AS_CATEGORY = True
+SHOW_ARTICLE_AUTHOR = True
+SHOW_ARTICLE_CATEGORY = True
+SHOW_ARTICLE_TAGS = True
+SHOW_DATE_MODIFIED = True
+
+# Flex-specific options
+DISQUS_SITENAME = ''
+GOOGLE_ANALYTICS = ''
 
 # Default pagination
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+######################################
+
+
+
+
