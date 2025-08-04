@@ -217,9 +217,9 @@ output/
 cache/
 
 # Pelican Ignore all theme contents EXCEPT submodule pointer
-# themes/Flex/*
-# !themes/Flex/.gitmodules
-# !themes/Flex/.git
+themes/Flex/*
+!themes/Flex/.gitmodules
+!themes/Flex/.git
 
 # Micromamba
 .micromamba/
