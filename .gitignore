@@ -215,7 +215,11 @@ __marimo__/
 #Pelican
 output/
 cache/
-themes/
+
+# Pelican Ignore all theme contents EXCEPT submodule pointer
+# themes/Flex/*
+# !themes/Flex/.gitmodules
+# !themes/Flex/.git
 
 # Micromamba
 .micromamba/
