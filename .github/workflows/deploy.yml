@@ -2,7 +2,7 @@ name: Deploy Pelican site to GitHub Pages
 
 on:
   push:
-    branches: [main]  # or "master", depending on your default
+    branches: [main]
 
 jobs:
   build:
@@ -27,12 +27,12 @@ jobs:
     - name: 🛠️ Build site
       run: pelican content -s publishconf.py
 
-    - name: 🚀 Deploy to GitHub Pages repo
+    - name: 🚀 Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         external_repository: eggduzao/eggduzao.github.io
+        publish_branch: main
         publish_dir: ./output
-        publish_branch: main  # or master, depending on that repo's default
-        user_name: "Eduardo Gusmao"
-        user_email: "eduardogade@gmail.com"
+        user_name: "eggduzao"
+        user_email: "eggduzao@gmail.com"
