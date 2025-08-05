@@ -27,9 +27,10 @@ ARTICLE_PATHS = ["blog"]
 PAGE_PATHS = ["pages"]
 
 # Static paths
-STATIC_PATHS = ['images', 'extra/CV.pdf']
+STATIC_PATHS = ['images', 'extra/CV.pdf', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
     'extra/CV.pdf': {'path': 'CV.pdf'},
+    'extra/CNAME': {'path': 'CNAME'},
 }
 
 # Site structure
