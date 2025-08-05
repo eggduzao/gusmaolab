@@ -216,10 +216,9 @@ __marimo__/
 output/
 cache/
 
-# Pelican Ignore all theme contents EXCEPT submodule pointer
+# Ignore all files inside Flex, but keep the submodule pointer
 themes/Flex/*
-!themes/Flex/.gitmodules
-!themes/Flex/.git
+!themes/Flex
 
 # Micromamba
 .micromamba/
