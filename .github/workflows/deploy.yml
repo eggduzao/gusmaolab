@@ -1,0 +1,36 @@
+name: Deploy Pelican site to GitHub Pages
+
+on:
+  push:
+    branches: [main]  # or "master", depending on your default
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout source
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: 🧪 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pelican markdown
+
+    - name: 🛠️ Build site
+      run: pelican content -s publishconf.py
+
+    - name: 🚀 Deploy to GitHub Pages repo
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        external_repository: eggduzao/eggduzao.github.io
+        publish_dir: ./output
+        publish_branch: main  # or master, depending on that repo's default
+        user_name: "Eduardo Gusmao"
+        user_email: "eduardogade@gmail.com"
