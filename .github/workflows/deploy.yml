@@ -6,65 +6,36 @@ on:
       - main
 
 jobs:
-  # build: # old
-  #   runs-on: ubuntu-latest # old
-  deploy: # new
-    runs-on: ubuntu-latest # new
+  deploy:
+    runs-on: ubuntu-latest
 
     steps:
-
-    # - name: 📥 Checkout source # old
-    #   uses: actions/checkout@v4 # old
-    #   with: # old
-    #     submodules: true # old
-
-      - uses: actions/checkout@v3
+      - name: 📥 Checkout source with submodules
+        uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive
           fetch-depth: 0
 
-    # - name: 🐍 Set up Python
-    #   uses: actions/setup-python@v5
-    #   with:
-    #     python-version: '3.12'
-
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-    # - name: 🧪 Install dependencies
-    #   run: |
-    #     python -m pip install --upgrade pip
-    #     pip install pelican markdown
-
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pelican markdown typogrify
 
-    # - name: 🛠️ Build site
-    #   run: |
-    #     pelican content -s publishconf.py -o output/ --delete-output-directory
-
-      - name: Build site
+      - name: 🛠️ Build the site
         run: |
-          pelican content -s pelicanconf.py
+          pelican content -s pelicanconf.py -o output --delete-output-directory
 
-    # - name: 🚀 Deploy to GitHub Pages
-    #   uses: peaceiris/actions-gh-pages@v3
-    #   with:
-    #     github_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-    #     external_repository: eggduzao/eggduzao.github.io
-    #     publish_branch: main
-    #     publish_dir: ./output
-    #     user_name: "eggduzao"
-    #     user_email: "eggduzao@gmail.com"
-
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages (external repo)
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
           external_repository: eggduzao/eggduzao.github.io
           publish_branch: main
           publish_dir: ./output
+          user_name: "eggduzao"
+          user_email: "eggduzao@gmail.com"
