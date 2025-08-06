@@ -7,7 +7,7 @@ TIMEZONE = 'America/Bahia'
 DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%d %B %Y'
 THEME = 'themes/Flex'
-
+ 
 # SideBar Bio
 AUTHOR = 'Eduardo Gade Gusmao'
 TAGLINE = 'Bioinformatician, Professor and AI/ML/DL Researcher'
