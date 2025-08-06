@@ -65,8 +65,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-          publish_branch: main  # <--- if using same repo (e.g. with `docs/`)
-          # OR use this if deploying to separate repo:
           external_repository: eggduzao/eggduzao.github.io
           publish_branch: main
           publish_dir: ./output
