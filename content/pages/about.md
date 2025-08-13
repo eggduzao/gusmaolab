@@ -92,7 +92,7 @@ Current number of pages **fully understood** of [James Joyce's Finnegans Wake](h
 
 ### **Career History**
 
-#### _Academia:_
+#### _Academia_
 
 | Period              | Position                              | Institution & Country                                  | Department & Lab                     |
 |---------------------|---------------------------------------|--------------------------------------------------------|--------------------------------------|
@@ -103,7 +103,7 @@ Current number of pages **fully understood** of [James Joyce's Finnegans Wake](h
 | Apr 2019 – Dec 2022 | _Senior Postdoctoral Research Fellow_ | **Georg-August University Medical School** *(Germany)* | Pathology Institute (Papantonis Lab) |
 | Feb 2018 – Mar 2019 | _Postdoctoral Research Fellow_        | **University of Cologne** *(Germany)*                  | CMMC Köln (Papantonis Lab)           |
 
-#### _Industry:_
+#### _Industry_
 
 | Period              | Position                             | Company                                     | Area/Department                          |
 |---------------------|--------------------------------------|---------------------------------------------|------------------------------------------|
