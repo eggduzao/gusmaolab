@@ -12,7 +12,7 @@ THEME = 'themes/Flex'
 AUTHOR = 'Eduardo Gade Gusmao'
 TAGLINE = 'Bioinformatician, Professor and AI/ML/DL Researcher'
 SITELOGO = '/images/avatar.png'  # optional
-FAVICON = '/images/favicon.ico'  # optional
+FAVICON = '/images/favicon.ico'  # optional 
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
