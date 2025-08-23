@@ -2,7 +2,7 @@
 # Metadata
 SITENAME = 'Gusmao Lab'
 SITESUBTITLE = 'Computational Biology • AI • Writing'
-SITEURL = ""
+SITEURL = "" # In main
 TIMEZONE = 'America/Bahia'
 DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%d %B %Y'
