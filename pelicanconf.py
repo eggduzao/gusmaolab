@@ -6,7 +6,7 @@ SITEURL = "" # In main
 TIMEZONE = 'America/Bahia'
 DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%d %B %Y'
-THEME = 'themes/Flex'
+THEME = 'themes/Flex' 
  
 # SideBar Bio
 AUTHOR = 'Eduardo Gade Gusmao'
