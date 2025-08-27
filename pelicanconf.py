@@ -1,11 +1,11 @@
 
-# Metadata
+# Metadata 
 SITENAME = 'Gusmao Lab'
 SITESUBTITLE = 'Computational Biology • AI • Writing'
 SITEURL = "" # In main
 TIMEZONE = 'America/Bahia'
 DEFAULT_LANG = 'en'
-DEFAULT_DATE_FORMAT = '%d %B %Y'
+DEFAULT_DATE_FORMAT = '%d %B %Y' 
 THEME = 'themes/Flex' 
  
 # SideBar Bio
@@ -81,10 +81,8 @@ GOOGLE_ANALYTICS = ''
 # Default pagination
 DEFAULT_PAGINATION = 10
 
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 ######################################
-
-
-
 

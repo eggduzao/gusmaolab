@@ -585,13 +585,13 @@ git submodule update --init --recursive
 
 Otherwise the themes/Flex folder will appear empty, and the site will crash.
 
----
+--- 
 
 **Step 3**: Update pelicanconf.py
 
 Inside the `pelicanconf.py` file. Set the theme:
 
-```
+``` 
 THEME = 'themes/Flex'
 ```
 
