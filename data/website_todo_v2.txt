@@ -1,0 +1,504 @@
+# PHASE 1 - Website Initial Coding, Backbones, SEO+Analytics and Personal Emails
+================================================================================
+
+PHASE 1 — Solid Foundations (Static Site, IA, SEO/Analytics, Core Pages, Domain/Email)
+
+Day 01 — Snapshot & tech baseline
+  - [ ] <Repo> Create `backup/2025-09-08` branch; export current Pelican output
+  - [ ] <Env> Create `environment.yml` (micromamba) pinning Pelican, plugins, pillow, markdown extensions
+  - [ ] <Tooling> Add `Makefile` targets: build, serve, clean, newpost, newpage
+  - [ ] <QA> Add `.editorconfig`, `.gitignore`, Prettier for Markdown, pre-commit hooks (trailing whitespace, EOF newline)
+
+Day 02 — Theme & design tokens
+  - [ ] <Theme> Add chosen theme (Flex/Elegant or local `/theme`) as submodule and wire in `pelicanconf.py`
+  - [ ] <Design> Establish CSS variables (color, spacing, radii, shadows); dark-mode respecting `prefers-color-scheme`
+  - [ ] <Type> Typography scale (e.g., modular), readable line-length (70–85 chars), code font setup
+
+Day 03 — IA & navigation (incl. Challenges link stub)
+  - [ ] <IA> Define top-nav: Home • Blog • Resources • Challenges • About • Contact • Learning • Teaching • Team
+  - [ ] <Page> Create `/challenges/` placeholder page explaining: “Challenges hub + leaderboard will link to a future GitHub repo” (no challenges yet)
+  - [ ] <Layout> Home = “cards grid + sidebar”, no infinite scroll; “Load more” button; archive page with pagination
+
+Day 04 — Header, footer, error pages
+  - [ ] <Header> Slim header with search icon, theme toggle, and clear focus states
+  - [ ] <Footer> ©, license, RSS/Atom, sitemap, last build time; mini site map links
+  - [ ] <Errors> Custom 404 and 410 pages; tasteful empty-state component
+
+Day 05 — Blog post scaffolding & MDX-ish niceties
+  - [ ] <Cards> Post cards with hero image, excerpt, read time, tags, “Updated on” if modified
+  - [ ] <Shortcodes> Callout/info/warning, code-badge, figure+caption, details/summary
+  - [ ] <Math/Code> Enable KaTeX/MathJax and robust code highlighting (line numbers optional)
+
+Day 06 — Taxonomy & archives
+  - [ ] <Tags/Series> Enable tags + series; per-tag and per-series landing pages with intros
+  - [ ] <Archive> Year/month archives; “Start here” curated list on blog index
+
+Day 07 — SEO & social graph
+  - [ ] <Plugins> Enable `sitemap`, `neighbors` (optional), `related_posts`, `assets`
+  - [ ] <Meta> OpenGraph/Twitter meta; default site social preview; per-post cover + `alt`
+  - [ ] <StructuredData> JSON-LD for `Person` and `BlogPosting`; canonical URLs; robots.txt; favicons incl. dark SVG
+
+Day 08 — **Blogging Day (mid-phase)**
+  - [ ] <Post> “Building the site, Part 1: Pelican setup, design tokens, Makefile tricks” (+ a neat Python/Make pattern)
+  - [ ] <Crosslink> Add 3 internal links to foundational docs/pages; add “Further reading”
+
+Day 09 — Analytics & privacy
+  - [ ] <Analytics> Add Plausible/Umami; custom domain tracking; ignore dev traffic
+  - [ ] <Privacy> DNT, IP anonymization, no cookies; stub Privacy page note (full policy later in PHASE 3)
+
+Day 10 — Search & feeds
+  - [ ] <Search> Generate Lunr.js index at build (title, tags, abstract); `/search/` page with no-JS fallback
+  - [ ] <Feeds> RSS/Atom validation; add links in `<head>` and footer
+
+Day 11 — Performance baseline
+  - [ ] <Images> Responsive images (AVIF/WebP) + lazy-loading; placeholder styles
+  - [ ] <Fonts> Preconnect, self-host critical fonts; font-display swap
+  - [ ] <Lighthouse> Set budgets; aim ≥90 Perf/SEO/A11y/Best Practices
+
+Day 12 — Core static pages: scaffolds
+  - [ ] <Pages> Create skeletons with front-matter for: `about.md`, `projects.md`, `contact.md`, `learning.md`, `teaching.md`, `team_members.md`
+  - [ ] <Style> Shared “hero + table-of-contents” block for long pages
+
+Day 13 — Projects.md (inventory + structure) **(+ Logo prompts)**
+  - [ ] <Inventory> List ALL projects (old/new) with: title, year, status, repo, brief, tags, links, impact highlights
+  - [ ] <Schema> Save to `data/projects.json` for future rendering
+  - [ ] <Logos — Prompt> Prepare a “signature logo” brief per project (vibe, motifs, constraints); **prompt assistant** for 3 concept directions each
+
+Day 14 — About/Team/Learning/Teaching first drafts
+  - [ ] <About> 3 sections: “Work with me”, “What I’m building”, “Office hours”
+  - [ ] <Team> `team_members.md` cards (photo placeholder, role, focus, links)
+  - [ ] <Learning/Teaching> Syllabi outlines + top resources; add “Start here” blocks
+
+Day 15 — Contact + newsletter
+  - [ ] <Form> Static contact form (Formspree/Netlify) with honeypot + rate-limit note
+  - [ ] <Newsletter> Buttondown/Substack embed; double opt-in copy; `/thanks` page with next steps
+
+Day 16 — Domain & redirects
+  - [ ] <DNS> Verify CNAME on repo + GoDaddy A/AAAA/CNAME records
+  - [ ] <Redirects> 301 redirects if old paths differ; confirm HTTPS everywhere
+
+Day 17 — Email setup
+  - [ ] <Provider> Choose (Google Workspace/Zoho); create `hello@`, `contact@`, `press@`
+  - [ ] <Auth> Configure SPF, DKIM, DMARC (start `p=quarantine`); test with mail-tester; add `mailto:` (obfuscated)
+
+Day 18 — Content Day #1
+  - [ ] <Post> Publish a substantial tutorial/teardown (code + figures); add 3 internal links; cross-post draft ready
+
+Day 19 — Content Day #2
+  - [ ] <Post> Publish second substantial piece (e.g., Variational Autoencoders explainer); add newsletter CTA block
+
+Day 20 — Milestone & QA
+  - [ ] <Milestone> **Milestone 1: Foundations online** — fast skeleton with core pages, search, analytics, SEO
+  - [ ] <QA> Link/alt checks; accessibility smoke test; backup `output/` and `data/` to `/releases/p1/`
+
+
+# PHASE 2 - UX & Automation, More Static Content, Resources, Live CV!
+=====================================================================
+
+PHASE 2 — Expanded Foundations & Automation (Authoring, CI/CD, Resources, CV/Profiles)
+
+Day 21 — CI/CD v2 (reliable builds)
+  - [ ] <GitHub Actions> Single pipeline: lint → build Pelican → check links (lychee) → HTML/asset minify → deploy
+  - [ ] <Caching> Cache `.venv`/`micromamba` + `output/` thumbnails to speed up builds
+  - [ ] <Quality Gates> Fail on broken internal links, missing `alt`, duplicate IDs, empty titles
+  - [ ] <Artifacts> Upload `output/` as build artifact; keep last 5 artifacts
+
+Day 22 — Media pipeline (speed + consistency)
+  - [ ] <Images> Responsive variants (AVIF/WebP/JP(e)G) + `<picture>` markup; lazy-loading + width/height set
+  - [ ] <Thumbs> Deterministic post cover generator (OG-card style) into `/static/img/social/`
+  - [ ] <Fonts> Self-host critical fonts, preconnect, preload first text-rendering subset
+
+Day 23 — Authoring ergonomics
+  - [ ] <Scaffolds> `make newpost "My Title"` & `make newpage "My Page"` → front-matter, slug, default sections
+  - [ ] <Archetypes> Post archetypes: “Tutorial”, “Release Notes”, “Deep Dive”, “Sunday Log” (with checklists)
+  - [ ] <Shortcodes> Callout/info/warning, code-badge, details/summary, figure+caption with `alt` enforcement
+
+Day 24 — Cross-posting helpers (safe)
+  - [ ] <Action> On `post_published`, open GitHub Issue with Medium/LinkedIn checklist + canonical URL template
+  - [ ] <Script> CLI to generate LinkedIn snippet (title + 280-char blurb + 3 hashtags) into clipboard
+  - [ ] <Docs> “How to cross-post safely” mini-guide in `/docs/publishing.md`
+
+Day 25 — Resources hub (value-first)
+  - [ ] <Page> Create `/resources/` with buckets: Starter Kits, Playbooks, Datasets, Slides, Templates
+  - [ ] <Cards> Each card: “Use it”, “Clone repo”, “Read guide”, last updated; no fluff
+  - [ ] <Data> Seed `data/resources.json` with initial items (manual snapshot)
+
+Day 26 — Auto-metrics for Resources
+  - [ ] <Scheduler> Nightly GitHub API Action → update stars/forks/issues → write `data/resources.json`
+  - [ ] <Privacy> Store token as Actions secret; backoff + retries; skip private repos
+  - [ ] <Validation> JSON schema + CI job that fails on invalid structure
+
+Day 27 — Resource visuals & UX
+  - [ ] <Sparklines> Inline SVG commit/issue sparklines rendered at build (no JS runtime)
+  - [ ] <Filters> Client-side filter by tag/type; maintain URL query params (`?tag=starter-kit`)
+  - [ ] <Empty State> Friendly placeholder when no filters match; CTA to suggest a resource
+
+Day 28 — About page refinement
+  - [ ] <Sections> “Work with me”, “What I’m building”, “Office hours” with real offerings & boundaries
+  - [ ] <CTA> Prominent contact & calendar link (Calendly/Cal.com) with expectations
+  - [ ] <Schema> JSON-LD `Person` enrichment (affiliations, sameAs links)
+
+Day 29 — Live CV pipeline
+  - [ ] <Source> Maintain `content/pages/cv.md` as single source of truth
+  - [ ] <Pandoc> Convert to PDF (GitHub Action) with nice template; attach build artifact + version stamp
+  - [ ] <Metrics> Add `data/profile.json` snapshot (ORCID, GS, RG links, h-index/citations if available) → rendered as “metrics strip”
+
+Day 30 — **Blogging Day (mid-phase)**
+  - [ ] <Post> “Automation that doesn’t bite: CI/CD, JSON data jobs, and static sparklines” (+ a nifty GitHub Actions matrix trick)
+  - [ ] <Crosslink> Link to `/resources/` and `/docs/publishing.md`; add 3 internal links to Phase 1 posts/pages
+
+Day 31 — Newsletter & contact polish
+  - [ ] <Newsletter> Buttondown/Substack embed tested; add `/thanks` + follow-up sequence text
+  - [ ] <Contact> Formspree/Netlify form with honeypot, rate-limit note, and success/failure states
+  - [ ] <Accessibility> Clear labels, error summaries, keyboard focus management
+
+Day 32 — Search & feeds upgrade
+  - [ ] <Search> Lunr index fields = title, tags, excerpt, headings; add simple no-JS fallback page
+  - [ ] <UX> Highlight matches; keyboard nav; empty-state tips
+  - [ ] <Feeds> Validate RSS/Atom; add per-tag feeds; expose in `<head>` and footer
+
+Day 33 — Performance pass (deeper)
+  - [ ] <CSS/JS> Purge unused CSS, minify; code-split any custom JS; set size budgets in CI
+  - [ ] <Images> LQIP/blurhash placeholders; verify CLS < 0.05 on core pages
+  - [ ] <Lighthouse> Aim ≥95 Perf / ≥95 A11y / ≥95 SEO / ≥95 Best Practices
+
+Day 34 — Accessibility baseline (phase 1)
+  - [ ] <A11y> Skip-to-content, focus outlines, color contrast checks; `prefers-reduced-motion` respected
+  - [ ] <Lint> Alt-text linter + heading order check in CI; manual pass with VoiceOver/NVDA notes
+  - [ ] <Docs> Add `/docs/a11y-checklist.md` for future contributors
+
+Day 35 — Logo Sprint #1 (from prompts)
+  - [ ] <Selection> From Phase 1 logo briefs, pick 3 strongest directions for 5 key projects
+  - [ ] <Vectors> Create monochrome SVG wordmark + mark; export light/dark; put in `/static/brand/<project>/`
+  - [ ] <Tokens> Add brand tokens (primary/secondary colors) to CSS variables and `projects.json`
+
+Day 36 — Projects page v2
+  - [ ] <Rendering> Generate cards from `data/projects.json` (not hand-coded); filters by status/area/year
+  - [ ] <Case Study> Template page for deep dives (hero, goals, impact, tech stack, lessons)
+  - [ ] <CTA> “Propose contribution” link to GitHub Issues with prefilled labels
+
+Day 37 — Team members v1
+  - [ ] <Cards> Photo (placeholder ok), role, focus, links (Scholar, ORCID, GitHub)
+  - [ ] <Schema> JSON-LD `Person` for each; ensure alt text; test mobile layout
+  - [ ] <Ops> Image processing (resize, format) + filename convention
+
+Day 38 — Learning & Teaching v2
+  - [ ] <Learning> Curated curricula with “Start here” blocks; difficulty tags; link to slides/repos
+  - [ ] <Teaching> Syllabi outlines with week-by-week bullets; downloadable PDF (Pandoc) via Action
+  - [ ] <Index> Add `/resources/` links where appropriate; avoid duplication
+
+Day 39 — Content Day #1
+  - [ ] <Post> Publish substantial tutorial/teardown (code + diagrams); link to resources and CV pipeline guide
+  - [ ] <Distribution> Cross-post + social snippets; add 3 internal links from older posts to this post
+
+Day 40 — Content Day #2 + Milestone
+  - [ ] <Post> Publish a second substantial piece (e.g., “From Markdown to PDF CVs with Pandoc + Actions”)
+  - [ ] <Milestone> **Milestone 2: Automation & Resources online** — CI solid, resources hub live, CV pipeline working
+  - [ ] <QA/Backup> Link/alt/a11y smoke test; export `output/` and `data/` to `/releases/p2/`
+
+
+# PHASE 3 - Challenge Area, Acessibility, Logging, Legal & Meta
+===============================================================
+
+PHASE 3 — Challenges Hub, A11y/Legal/Meta, Observability (no individual challenges yet)
+
+Day 41 — Challenges hub: IA & spec
+  - [ ] <Challenges> Create `/challenges/` landing with clear overview, FAQ, and CTA linking to the **future GitHub repo** (placeholder link for now)
+  - [ ] <Schema> Draft `leaderboard.schema.json` (name, handle, repo_url, score, date, tags, notes)
+  - [ ] <Docs> Add `/docs/challenges-overview.md` explaining flow: “submit via PR to repo → validated → leaderboard.json updated → site consumes on build”
+
+Day 42 — Leaderboard data plumbing
+  - [ ] <Data> Add `data/leaderboard.sample.json` (valid per schema) used until real repo exists
+  - [ ] <Build> Build step reads local `leaderboard.sample.json` OR fetches from GitHub raw URL if env `LEADERBOARD_URL` present
+  - [ ] <Sort> Default ranking by `score` (desc), tie-break by earlier `date`, then `name`; persist in build log
+
+Day 43 — Leaderboard UI/UX
+  - [ ] <Table> Paginated table with sticky header, column sort (score/date), search box by name/handle/tags
+  - [ ] <Badges> Top-3 badge chips; tag filters (`?tag=…`) via query params
+  - [ ] <Empty> Friendly empty state (before repo launches) with “How it will work” explainer
+
+Day 44 — Submission flow kit (repo-ready, but shipped here as docs)
+  - [ ] <Templates> PR template and `CONTRIBUTING.md` for the future repo (kept in `/docs/challenges-repo/`)
+  - [ ] <Validation> `validate_leaderboard.js` (or Python) example script + `npm run validate` instructions
+  - [ ] <Security> Guidance on input sanitization, link safety, and spam rate-limit suggestions
+
+Day 45 — Automation spec for the future repo
+  - [ ] <Actions> Sample GitHub Actions YAML: on PR → run schema validation → label “verified” → on merge, update `leaderboard.json`
+  - [ ] <Bot> Commit bot name suggestion + least-privilege PAT notes; retry/backoff logic and failure alerts
+  - [ ] <Docs> Sequence diagram in `/docs/challenges-automation.md`
+
+Day 46 — Observability & uptime
+  - [ ] <Uptime> Configure Better Stack/StatusCake for public HTTP checks; add status badge to README
+  - [ ] <Logs> 404/410 capture (Netlify/Cloudflare or GitHub Pages analytics alt); weekly report script
+  - [ ] <Analytics> Define custom events in Plausible/Umami for key clicks (newsletter, challenges CTA)
+
+Day 47 — Accessibility audit (pass #2)
+  - [ ] <A11y> Global: heading order, skip-to-content, focus outlines, color contrast verification
+  - [ ] <Forms> Labels, error summaries, keyboard traps; verify contact/newsletter flows
+  - [ ] <CI> Add pa11y/axe CI job with thresholds; fail on regressions
+
+Day 48 — Legal & policies v1
+  - [ ] <Pages> Draft `privacy.md`, `terms.md`, `licenses.md` (content CC-BY; code MIT); link in footer
+  - [ ] <Challenges> Add disclaimer + code of conduct excerpt; define eligibility and fair-play notes
+  - [ ] <Robots> Robots.txt review; add `/legal/` index page
+
+Day 49 — SEO & discoverability deep-dive
+  - [ ] <SearchConsole> Verify domain in Google/Bing; submit sitemap; fix coverage warnings
+  - [ ] <StructuredData> Add BreadcrumbList JSON-LD; validate with testing tools; screenshot proofs in `/docs/seo/`
+  - [ ] <Feeds> Per-tag feeds; expose in `<head>` and footer; ensure canonical URLs everywhere
+
+Day 50 — **Blogging Day (mid-phase)**
+  - [ ] <Post> “Designing a Challenge Hub (without shipping a challenge): schema, CI, and static leaderboards” (+ a composite GitHub Action trick)
+  - [ ] <Crosslink> Link `/challenges/` and `/docs/challenges-overview.md`; add 3 internal links to Phase 1–2 posts
+
+Day 51 — Contact & newsletter hardening
+  - [ ] <Contact> Better failure states + retry hint; privacy note; optional hCaptcha/Turnstile (non-tracking)
+  - [ ] <Email> DMARC aggregate reports review; bounce handling note; add `mailto:` obfuscation test
+
+Day 52 — Search UX polish
+  - [ ] <Index> Add headings + excerpt fields; simple synonyms map (e.g., “VAE” ↔ “variational autoencoder”)
+  - [ ] <UX> Keyboard navigation, highlight matches, empty-state tips; index size budget in CI
+
+Day 53 — Team/About/Media
+  - [ ] <Team> Add richer bios, expertise tags, and contact preferences
+  - [ ] <Press> Create `/press/` with logos, headshot, boilerplate, and contact; add OpenGraph kit ZIP
+  - [ ] <About> Add “Work with me” packages & boundaries; calendar link expectations
+
+Day 54 — Projects v3 & Logo Sprint #2
+  - [ ] <Logos> Expand signature logos for remaining projects; export monochrome/light/dark SVGs
+  - [ ] <Brand> Add brand usage page (`/brand/`): spacing grid, min sizes, do/don’t
+  - [ ] <Data> Update `data/projects.json` with brand tokens; ensure alt text everywhere
+
+Day 55 — Resources hub v2
+  - [ ] <Submit> “Suggest a resource” → prefilled GitHub Issue link; quality checklist in template
+  - [ ] <Metrics> Nightly stars/forks refresh with backoff; sparkline regressions test; sort by curated “utility”
+  - [ ] <UX> Filters, pinned items, and “Recently updated” rail
+
+Day 56 — Comments (optional, privacy-respecting)
+  - [ ] <Giscus> Integrate Giscus behind front-matter toggle; per-post opt-in; add privacy note
+  - [ ] <CSP> Set Content-Security-Policy header instructions; test with and without comments
+  - [ ] <Docs> `/docs/comments.md` trade-offs & moderation tips
+
+Day 57 — Performance & regression testing
+  - [ ] <CI> Lighthouse-CI budgets; block on LCP/CLS regressions beyond thresholds
+  - [ ] <Assets> Purge unused CSS; JS code-split audit; AVIF/WebP coverage report
+  - [ ] <QA> Lychee broken-link sweep; alt-text linter; tag/series typos
+
+Day 58 — Red-team sweep
+  - [ ] <Audit> Random-walk the site on mobile/desktop; report UX papercuts
+  - [ ] <Offline> Check no-JS paths (search fallback, nav); verify 404/410 behavior and links from error pages
+  - [ ] <Backup> Snapshot `/output/`, `/data/`, `/docs/` diffs; prep release notes
+
+Day 59 — Content Day #1
+  - [ ] <Post> Publish a substantial tutorial (code + diagrams) tying into `/challenges/` and `/resources/`
+  - [ ] <Distribution> Cross-post with canonical; add 3 internal backlinks from older posts
+
+Day 60 — Content Day #2 + Milestone
+  - [ ] <Post> Publish second substantial piece (e.g., leaderboard data plumbing with schema validation)
+  - [ ] <Milestone> **Milestone 3: Challenge hub & leaderboard wired (to future repo), A11y/SEO/Legal solid, observability live**
+  - [ ] <QA/Backup> Final sweep; export to `/releases/p3/` with checksums
+
+
+# PHASE 4 - Micropolish and Glam-up Website to completion
+=========================================================
+
+PHASE 4 — Perfect the Core & Micro-Polish (no hyper-glam; ship a pristine, production-quality site)
+
+Day 61 — Design system & styleguide
+  - [ ] <Tokens> Finalize color/spacing/typography/radius/shadow variables; document in `/docs/design-system.md`
+  - [ ] <Components> Catalog buttons, cards, callouts, tables, code blocks, figure+caption; usage + do/don’t
+  - [ ] <Styleguide> Add `/styleguide/` page rendering live components from Markdown shortcodes
+
+Day 62 — Asset hygiene & OG automation
+  - [ ] <Images> One-time audit: remove orphans, fix dims, ensure `alt` on all; add responsive `<picture>` where missing
+  - [ ] <OG> Script to auto-generate OpenGraph images from front-matter (title + tag chips) into `/static/img/social/`
+  - [ ] <Favicons> Full set (ICO, PNG, SVG, maskable) + `manifest.webmanifest`; verify dark/light icons
+
+Day 63 — Internationalization groundwork
+  - [ ] <i18n> Enable Pelican i18n plugin; content folders `content/` (en default) and `content-pt/` (pt-BR)
+  - [ ] <Switcher> Language toggle in header with persistent choice; store in query/hash (no cookies)
+  - [ ] <SEO> Add `hreflang`/`lang` attrs; per-locale sitemap sections
+
+Day 64 — i18n content pass (core pages)
+  - [ ] <Translate> `about.md`, `projects.md`, `contact.md`, `learning.md`, `teaching.md`, `team_members.md`
+  - [ ] <Nav/Footer> Localize nav labels, dates, read-time, and form messages
+  - [ ] <QA> Validate accented characters, hyphenation, and line length in pt-BR
+
+Day 65 — Security & headers
+  - [ ] <Headers> Document CSP, Referrer-Policy, X-Content-Type-Options, Permissions-Policy equivalents for your host
+  - [ ] <SRI> Add Subresource Integrity hashes to external scripts/styles (if any)
+  - [ ] <Security> Create `/.well-known/security.txt`; add PGP/public contact if desired
+
+Day 66 — CDN & caching (fronting optional)
+  - [ ] <Cache> Define cache lifetimes for HTML, CSS/JS, images; version assets with content hashes
+  - [ ] <CDN> If fronting with Cloudflare: enable Brotli, image compression, page rules for `/static/`
+  - [ ] <Revalidation> Stale-while-revalidate notes; Lighthouse check on cache behavior
+
+Day 67 — Deterministic builds & speed
+  - [ ] <Pinning> Lock Python/NPM deps; freeze plugin versions; record build env in `/docs/build-env.md`
+  - [ ] <Repro> Clean-room build on fresh runner; compare checksums of `output/` (allow only expected diffs)
+  - [ ] <Parallel> Speed up thumbnails/OG gen with job matrix; log timings to `build_times.csv`
+
+Day 68 — Search v3 (quality & ranking)
+  - [ ] <Index> Add headings/excerpts/tags; synonyms map (e.g., “VAE” ↔ “variational autoencoder”)
+  - [ ] <UX> Keyboard nav, match highlighting, empty-state tips; no-JS fallback list
+  - [ ] <Relevance> Simple ranking (title > heading > body); test queries and record results in `/docs/search-tests.md`
+
+Day 69 — Publications & talks
+  - [ ] <Pipeline> Maintain `content/data/publications.bib`; convert to Markdown at build (Pandoc/BibTex → CSL)
+  - [ ] <Format> Render in preferred style (“Nucleic Acids Res, 51(20): 10992-11009, 2023”); group by year/venue
+  - [ ] <Talks> Add `/talks/` with abstracts, slides, video links; per-talk OpenGraph image
+
+Day 70 — **Blogging Day (mid-phase)**
+  - [ ] <Post> “Micro-polish that matters: i18n, CSP, and deterministic builds” (+ tiny Pelican/i18n snippet)
+  - [ ] <Crosslink> Link to `/styleguide/`, `/publications/`, and `/docs/build-env.md`
+
+Day 71 — Micro-interactions & progressive enhancement
+  - [ ] <Motion> Tasteful transitions for hover/focus; obey `prefers-reduced-motion`
+  - [ ] <PE> Features degrade gracefully with JS off (search fallback, menus, language switch)
+  - [ ] <Focus> Highly visible focus rings and skip links across pages
+
+Day 72 — Accessibility pass #3
+  - [ ] <Contrast> Verify WCAG AA/AAA where feasible; color-blind palette check
+  - [ ] <Landmarks> Proper ARIA landmarks; heading order map; improve table semantics
+  - [ ] <Forms> Error summaries, labels/IDs, keyboard traps; VoiceOver/NVDA smoke tests recorded
+
+Day 73 — Test matrix & visual regression
+  - [ ] <Devices> Run Playwright screenshots on key breakpoints (mobile/desktop, dark/light)
+  - [ ] <VR> Commit baseline images; fail CI on >0.1% pixel drift for key templates
+  - [ ] <Real-world> Throttle to “Slow 3G”; ensure CLS < 0.05, LCP < 2.5s on Home/Posts
+
+Day 74 — Print styles & PDFs
+  - [ ] <Print> Add print CSS for posts/pages; collapse nav/hero; show URLs after links
+  - [ ] <Export> One-click “Save as PDF” friendly output; test CV and long tutorials
+
+Day 75 — Comments & moderation polish (if enabled)
+  - [ ] <Giscus> Per-post opt-in default; add privacy note + moderation guidelines
+  - [ ] <Counts> Lazy-load comment counts; ensure CSP allows Giscus frames conditionally
+
+Day 76 — Newsletter & distribution refinement
+  - [ ] <Welcome> Draft 3-email welcome series; link to cornerstone posts/resources
+  - [ ] <UTM> Add UTM builder macro for internal links; document in `/docs/publishing.md`
+  - [ ] <Curation> “Start here” section on Blog and Resources; periodic “Best of” post template
+
+Day 77 — Projects & case studies finalization (+ Logo Sprint #3)
+  - [ ] <Case> Promote 2–3 projects to full case studies (problem → approach → impact → lessons)
+  - [ ] <Logos> Finish remaining project logos; export SVG light/dark + README usage
+  - [ ] <Brand> Add `/brand/` page (download kit, spacing grid, min sizes)
+
+Day 78 — Performance & CWV final pass
+  - [ ] <Fonts> Verify subset/preload; limit layout shift in first viewport
+  - [ ] <Images> Check AVIF/WebP coverage; LQIP/blurhash present on all hero images
+  - [ ] <Budgets> Lighthouse-CI budgets tightened; fail build on regressions
+
+Day 79 — Content Day #1
+  - [ ] <Post> Publish substantial tutorial/teardown; add 3 internal links; cross-post with canonical
+
+Day 80 — Content Day #2 + Milestone
+  - [ ] <Post> Publish second substantial piece (e.g., “From BibTeX to beautiful publications with CSL”)
+  - [ ] <Milestone> **Milestone 4: Core perfected** — i18n baseline, security/caching, publications/talks, design system, CWV green
+  - [ ] <QA/Backup> Final sweep; export `/releases/p4/` (output + data + docs) with checksums
+
+
+# PHASE 5 - Hyper-Glam: Turning the finished website into a piece of art
+========================================================================
+
+PHASE 5 — Hyper-Glam (Industry-grade motion, interactive art, science-viz) — all behind tasteful flags, a11y-first
+
+Day 81 — Vision, guardrails, and kill-switches
+  - [ ] <Brief> Write creative brief for “Nucleus/Chromatin” experience (goals, constraints, tone, success metrics)
+  - [ ] <Budgets> Set strict budgets: +0ms LCP impact on Home; ≤60KB gz total hyper-glam JS; CPU < 10% on mid devices
+  - [ ] <Flags> Feature flag infra: `?experimental=1` + localStorage toggle + “Turn off animations” global switch
+  - [ ] <A11y> Motion policy doc (respect `prefers-reduced-motion`), keyboard-first nav, readable without graphics
+  - [ ] <QA> Establish perf/a11y checklist to run on every hyper-glam page
+
+Day 82 — Nucleus/Chromatin Nav: architecture
+  - [ ] <Stack> Decide SVG core with optional Canvas layer for particles (no WebGL unless budgets allow)
+  - [ ] <Data> Define regions JSON (`id`, `label`, `href`, `hotspot`, `focusOrder`, `tooltip`)
+  - [ ] <Layout> Responsive viewBox; mobile layout swaps to ring/arc nav variant
+
+Day 83 — Nucleus base drawing & regions
+  - [ ] <SVG> Draw nucleus, nucleolus, chromatin “loops” as paths; semantic `<title><desc>` per region
+  - [ ] <HitAreas> Add invisible hit areas with generous padding; roving tabindex for keyboard
+  - [ ] <Tokens> Theme tokens for stroke/glow/halo; dark/light readiness
+
+Day 84 — Interaction & micro-physics
+  - [ ] <Motion> Springy hover/focus (CSS transform + JS spring); bounded amplitude; debounce pointer events
+  - [ ] <Focus> Arrow-key navigation between regions; Enter/Space activate; ESC exits focus mode
+  - [ ] <Tooltips> Accessible tooltips via `aria-describedby`; no hover-only content
+
+Day 85 — Performance containment
+  - [ ] <Containment> `content-visibility`, `will-change`, and `requestIdleCallback` for non-critical work
+  - [ ] <Isolation> Ship as a micro-bundle loaded only on Home; preload off; lazy after first interaction
+  - [ ] <Metrics> Record render cost under CPU throttle (4×); document timings in `/docs/hyperglam-metrics.md`
+
+Day 86 — Visual polish & depth
+  - [ ] <Art> Subtle inner/outer glows, parallax-ish depth on loops; gradient meshes converted to baked SVG
+  - [ ] <Themes> Add 2 theme variants (“Lab Night”, “Morning Paper”) toggleable in experimental panel
+  - [ ] <Sound> Optional soft UI-click (44ms WAV), off by default; obey `prefers-reduced-motion` & `prefers-reduced-transparency`
+
+Day 87 — Accessibility verification
+  - [ ] <SR> Screen reader path test (VoiceOver/NVDA): labels, order, announcements
+  - [ ] <Contrast> Verify gradients maintain AA on overlays; add high-contrast outline mode
+  - [ ] <Docs> `/docs/hyperglam-a11y.md` with examples + screenshots
+
+Day 88 — Science-viz pipeline (build-time SVG)
+  - [ ] <Generator> Build script to convert CSV/JSON (e.g., embeddings, timelines) → SVG charts at build (D3 node or Python)
+  - [ ] <Alt> Per-figure long-desc generation from metadata; link via `aria-details`
+  - [ ] <Gallery> `/viz/` page showcasing examples (no runtime JS required)
+
+Day 89 — Longform scrollytelling template
+  - [ ] <Template> Create “story” layout with sticky graphic panes + caption rail (IntersectionObserver)
+  - [ ] <Fallback> No-JS: static checkpoints with anchor links; print styles preserve narrative flow
+  - [ ] <Guide> Authoring guide with section recipe (Hook → Demo → Takeaway)
+
+Day 90 — **Blogging Day (mid-phase)**
+  - [ ] <Post> “Designing a nucleus: hyper-glam without hurting LCP” (+ micro-bundle and idle-task tricks)
+  - [ ] <Crosslink> Link to `/viz/` and a11y/perf docs; add 3 internal links to earlier phases
+
+Day 91 — Leaderboard glam (optional, behind flag)
+  - [ ] <Particles> Canvas halos for Top-3 rows; reduced motion → static badges
+  - [ ] <Perf> Only activate when table is in-view; tear down on blur; keep under 1% main-thread time
+  - [ ] <A11y> No information conveyed by motion alone; badges have text equivalents
+
+Day 92 — Project cards 3D-ish + parallax
+  - [ ] <Cards> Perspective tilt within ±6°; pointer + keyboard focus parity
+  - [ ] <Fallback> Disable on low-power mode; print/static snapshots for previews
+
+Day 93 — Live sandboxes (offline demos)
+  - [ ] <WebComp> Lightweight web component to run tiny algorithm demos (e.g., k-means) in Web Worker
+  - [ ] <NoJS> Graceful fallback to static code + precomputed result image
+  - [ ] <Security> Content Security Policy updated; no remote eval
+
+Day 94 — Motion branding & logo reveals
+  - [ ] <Logos> Add subtle SVG path-draw or mask-reveal for project logos (≤400ms); interruptible on user input
+  - [ ] <Kit> Export motion guidelines in `/brand/` (durations, easings, do/don’t)
+
+Day 95 — OG “video poster” cards (animated → static)
+  - [ ] <Render> Pre-render 1–2s MP4/animated WebP posters for cornerstone posts (build-time ffmpeg)
+  - [ ] <Fallback> Static PNG for crawlers; meta tags validated; size budget < 200KB per card
+
+Day 96 — Theme lab & user prefs
+  - [ ] <Lab> Experimental “Theme Lab” panel to preview color/font tokens live (no persistence by default)
+  - [ ] <Prefs> Persist chosen theme in localStorage with clear reset; document privacy expectations
+
+Day 97 — Advanced SEO for rich media
+  - [ ] <JSON-LD> Add `CreativeWork`/`Dataset` markup to scrollytelling/viz pages
+  - [ ] <Sitemaps> Media sitemap section; thumbnails declared; validate with testing tools
+  - [ ] <Previews> Twitter Player Card tests; fallback to Summary Large Image where unsupported
+
+Day 98 — Testing gauntlet
+  - [ ] <Perf> Lighthouse-CI under CPU/network throttle; block on LCP > 2.5s or CLS > 0.05
+  - [ ] <A11y> Axe/pa11y suite on hyper-glam pages; fix keyboard traps/reading order
+  - [ ] <VR> Visual regression snapshots (dark/light, motion on/off) for nucleus nav and cards
+
+Day 99 — Content Day #1
+  - [ ] <Post> Publish substantial hyper-glam deep dive (code + diagrams); add 3 internal links; canonical set
+
+Day 100 — Content Day #2 + Milestone
+  - [ ] <Post> Publish second substantial piece (e.g., “Build-time science-viz: fast, accessible, beautiful”)
+  - [ ] <Milestone> **Milestone 5: Hyper-Glam shipped (flagged)** — nucleus nav, science-viz, scrollytelling, and glam interactions live without hurting performance
+  - [ ] <QA/Backup> Snapshot `/releases/p5/` (output + data + docs) with checksums
+
+Extra Day — Shameless promotion planning
+  - [ ] <Prompt> “Help me craft a shameless promotion plan for Chapters XX–XX of ‘Bioinformatics in 6 Acts’ (audiences, channels, 3-week cadence, metrics, and draft copy).”

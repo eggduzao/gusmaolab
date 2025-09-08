@@ -12,9 +12,6 @@ find . -name "._*" -type f -delete
 # Removendo .Trashes and outros que, às vezes, o MAC gera, quando quer.
 find . -name ".Trashes" -type d -exec rm -rf {} +
 
-# (WARNING) Removes all 'hidden' files/folders (i.e. EVERYTHING that starts with ".")
-# find . -name ".*" -type f ! -name ".git*" -delete
-
 # Message
 echo "Cleaning Python build artifacts..."
 
