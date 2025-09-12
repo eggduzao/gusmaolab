@@ -1,0 +1,205 @@
+GusmaoLab/
+├── LICENSE
+├── README.md
+├── Makefile
+├── pelicanconf.py
+├── publishconf.py
+├── requirements.txt
+├── environment.yml
+├── .editorconfig
+├── .git/
+├── .gitignore
+├── .pre-commit-config.yaml
+├── .lycheeignore
+├── .npmrc
+├── package.json
+├── scripts/
+│		├── gen_social_og.py
+│		├── validate_leaderboard.js
+│		├── build_viz_svg.py
+│		├── gen_cover_thumbs.py
+│		├── gen_search_index.py
+│		└── profile_metrics_snapshot.py
+├── tasks.py
+├── clean.sh
+├── backup/
+│		└── 2025-09-08/											# initial snapshot (Day 01)
+├── releases/
+│		├── p1/
+│		├── p2/
+│		├── p3/
+│		├── p4/
+│		└── p5/
+├── .github/
+│		└── workflows/
+│				├── build_deploy.yml							# CI: lint→build→check→deploy (Day 21)
+│				├── link_check.yml
+│				├── artifact_keep5.yml
+│				├── pandoc_cv.yml								# CV PDF pipeline (Day 29)
+│				├── nightly_resource_metrics.yml				# stars/forks updater (Day 26)
+│				├── lighthouse_ci.yml							# CWV budgets (Day 57/78)
+│				├── pa11y_axe.yml								# a11y checks (Day 47/72)
+│				└── visual_regression.yml						# Playwright snapshots (Day 73/98)
+├── content/
+│		├── blog/
+│		│		├── 2025-08-02-first-post.md
+│		│		└── _archetypes/								# Day 23
+│		│				├── tutorial.md
+│		│				├── deep-dive.md
+│		│				├── release-notes.md
+│		│				└── sunday-log.md
+│		├── pages/
+│		│		├── about.md
+│		│		├── projects.md
+│		│		├── contact.md
+│		│		├── learning.md
+│		│		├── teaching.md
+│		│		├── team_members.md
+│		│		├── resources.md								# hub (Day 25)
+│		│		├── styleguide.md								# live components (Day 61)
+│		│		├── press.md									# media kit (Day 53)
+│		│		├── brand.md									# usage & download (Day 54/77)
+│		│		├── talks.md									# (Day 69)
+│		│		├── publications.md								# rendered from .bib (Day 69)
+│		│		├── privacy.md									# legal (Day 48)
+│		│		├── terms.md									# legal (Day 48)
+│		│		├── licenses.md									# content/code licenses (Day 48)
+│		│		├── challenges.md								# landing/FAQ (Day 41)
+│		│		├── search.md						 			# Lunr.js page (Day 10/32)
+│		│		├── thanks.md						 			# newsletter thanks (Day 15/31)
+│		│		├── 404.md								 		# custom error (Day 04)
+│		│		└── 410.md								 		# gone (Day 04)
+│		├── data/
+│		│		├── projects.json								# inventory schema (Day 13/36)
+│		│		├── resources.json								# seeded + auto-updated (Day 25/26/55)
+│		│		├── leaderboard.sample.json						# challenges (Day 42)
+│		│		├── leaderboard.schema.json						# (Day 41)
+│		│		├── profile.json								# metrics strip (Day 29)
+│		│		└── search_synonyms.json						# search polish (Day 52/68)
+│		├── extra/
+│		│		├── CNAME
+│		│		├── robots.txt
+│		│		├── security.txt								# /.well-known/security.txt (Day 65)
+│		│		└── humans.txt
+│		├── images/
+│		│		├── posts/
+│		│		├── team/
+│		│		├── brand/
+│		│		├── social/										# OG cards (Day 62)
+│		│		└── favicons/									# full set + manifest (Day 62)
+│		└── downloads/
+│				└── kits/										# OG kit ZIP, brand kit (Day 53/77)
+├── content-pt/													# i18n (Day 63–64)
+│		├── blog/
+│		└── pages/
+│				├── sobre.md
+│				├── projetos.md
+│				├── contato.md
+│				├── aprendizado.md
+│				├── ensino.md
+│				├── equipe.md
+│				├── recursos.md
+│				├── privacidade.md
+│				├── termos.md
+│				└── licencas.md
+├── static/
+│		├── css/
+│		│		├── tokens.css									# design tokens (Day 02/61)
+│		│		├── components.css
+│		│		├── print.css									# (Day 74)
+│		│		└── dark.css
+│		├── js/
+│		│		├── lunr.min.js									# search (Day 10/32)
+│		│		├── search.js
+│		│		├── leaderboard.js								# table UI (Day 43)
+│		│		├── theme-toggle.js
+│		│		└── giscus.js									# optional comments (Day 56/75)
+│		├── fonts/
+│		├── img/
+│		│		├── social/
+│		│		├── brand/
+│		│		└── placeholders/
+│		└── manifest.webmanifest								# favicons/PWA bits (Day 62)
+├── themes/
+│		├── Flex/												# current theme (submodule)
+│		└── GusmaoLab/											# local overrides/custom (Day 02/61)
+│				├── templates/
+│				│		├── base.html
+│				│		├── index.html
+│				│		├── page.html
+│				│		├── article.html
+│				│		├── archives.html
+│				│		├── tag.html
+│				│		├── series.html
+│				│		├── search.html
+│				│		├── challenges.html
+│				│		├── resources.html
+│				│		├── projects.html
+│				│		├── publications.html
+│				│		├── talks.html
+│				│		└── styleguide.html
+│				├── static/										# theme-specific assets
+│				└── macros/										# shortcodes/callouts (Day 05/23)
+├── docs/
+│		├── publishing.md										# cross-posting guide (Day 24/76)
+│		├── design-system.md									# tokens/components (Day 61)
+│		├── a11y-checklist.md									# (Day 34)
+│		├── challenges-overview.md								# (Day 41)
+│		├── challenges-repo/
+│		│		├── CONTRIBUTING.md								# repo-ready templates (Day 44)
+│		│		└── PULL_REQUEST_TEMPLATE.md
+│		├── challenges-automation.md							# sequence diagram/notes (Day 45)
+│		├── seo/
+│		│		├── search-console-proofshots.md				# (Day 49)
+│		│		└── structured-data-notes.md
+│		├── build-env.md										# pinned env & repro (Day 67)
+│		├── search-tests.md										# queries/ranking logs (Day 68)
+│		├── hyperglam-a11y.md									# (Day 87)
+│		└── hyperglam-metrics.md								# perf budgets (Day 85)
+├── org/
+│		├── website_todo_v1.txt
+│		├── website_todo_v2.txt
+│		└── website_todo_v3.txt
+├── data/														# build-time/generated data outputs
+│		├── search_index.json									# built by scripts/gen_search_index.py
+│		├── build_times.csv
+│		└── viz_cache/
+├── publications/
+│		├── publications.bib									# source (Day 69)
+│		├── style.csl											# CSL for NAR format (Day 69)
+│		└── templates/
+│				└── pub_list.md
+├── cv/
+│		├── cv.md												# single source of truth (Day 29)
+│		└── template.tex										# Pandoc template (Day 29)
+├── resources/													# seed + images for resources hub (Day 25–27,55)
+│		├── thumbnails/
+│		└── samples/
+├── brand/
+│		├── gusmaolab-logo.svg
+│		├── project-logos/
+│		│		├── bloom/
+│		│		│		├── bloom-mark.svg
+│		│		│		└── bloom-wordmark.svg
+│		│		└── stainalyzer/
+│		│				├── stainalyzer-mark.svg
+│		│				└── stainalyzer-wordmark.svg
+│		└── kit/
+│				└── gusmaolab-brand-kit.zip
+├── viz/														# build-time SVG science-viz (Day 88)
+│		├── data/
+│		└── svg/
+├── hyperglam/													# behind flags (PHASE 5)
+│		├── nucleus/
+│		│		├── data/regions.json
+│		│		├── nucleus.svg
+│		│		└── nucleus.js									# micro-bundle; lazy (Day 82–86)
+│		├── sandboxes/
+│		│		├── kmeans/
+│		│		│		├── worker.js
+│		│		│		└── demo.html
+│		│		└── common/
+│		└── cards/
+│				└── tilt.js
+├── output/														# Pelican build output (gitignored)
+└── tree.txt													# repo tree snapshot
