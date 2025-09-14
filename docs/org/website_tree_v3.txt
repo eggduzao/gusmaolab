@@ -155,11 +155,11 @@ GusmaoLab/
 │		├── build-env.md										# pinned env & repro (Day 67)
 │		├── search-tests.md										# queries/ranking logs (Day 68)
 │		├── hyperglam-a11y.md									# (Day 87)
-│		└── hyperglam-metrics.md								# perf budgets (Day 85)
-├── org/
-│		├── website_todo_v1.txt
-│		├── website_todo_v2.txt
-│		└── website_todo_v3.txt
+│		├── hyperglam-metrics.md								# perf budgets (Day 85)
+│		└── org/
+│				├── website_todo_v1.txt
+│				├── website_todo_v2.txt
+│				└── website_todo_v3.txt
 ├── data/														# build-time/generated data outputs
 │		├── search_index.json									# built by scripts/gen_search_index.py
 │		├── build_times.csv
@@ -201,5 +201,4 @@ GusmaoLab/
 │		│		└── common/
 │		└── cards/
 │				└── tilt.js
-├── output/														# Pelican build output (gitignored)
-└── tree.txt													# repo tree snapshot
+└── output/														# Pelican build output (gitignored)
