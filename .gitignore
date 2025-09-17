@@ -229,3 +229,7 @@ themes/Flex/*
 ._*
 .AppleDouble
 .LSOverride
+
+# Logo
+_logo/
+
