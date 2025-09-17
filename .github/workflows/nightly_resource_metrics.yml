@@ -1,0 +1,34 @@
+# ✨🌸 THE FABULOUS PLACEHOLDER WORKFLOW 🌸✨
+# This file lives at: GusmaoLab/.github/workflows/nightly_resource_metrics.yaml
+# Purpose: To hold the stage while the real diva (your workflow) is still getting her makeup done.
+# Feel free to replace GusmaoLab with your star project's name when she’s ready to shine. 💃
+
+name: 👑 Placeholder for GusmaoLab 👑
+
+on:
+  workflow_dispatch: # summoned only when you clap your hands
+  push:
+    branches-ignore:
+      - '**'   # Ignore literally everything, darling
+
+jobs:
+  runway-show:
+    name: 🎭 The Placeholder Spectacle
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 💅 Announce Arrival
+        run: |
+          echo "✨ Welcome to the Placeholder Workflow for GusmaoLab ✨"
+          echo "This glamorous YAML does absolutely NOTHING productive."
+          echo "She’s just here to serve looks until the real workflow is ready."
+          echo "-----------------------------------------------------------"
+          echo "Status: In development. Coming soon to a repo near you. 🌹"
+
+      - name: 🪞 Mirror Check
+        run: |
+          echo "Does GusmaoLab look fabulous? Yes. Always. 💃"
+
+      - name: 🎤 Mic Drop
+        run: |
+          echo "Thank you, thank you. The curtain falls. See you at the premiere. 🎬"
