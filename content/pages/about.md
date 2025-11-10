@@ -9,7 +9,7 @@ As a computational biologist with a strong focus on the integration of machine/d
 
 To this end, he aims to advance methods that leverage hypergraph-based and deep probabilistic learning techniques to capture and model the spatial organization of chromatin. **His vision is to establish a novel class of CABs that integrate insights from multi-omics datasets, enabling precise biomarker identification for aging interventions and immuno-celular therapies.** With a foundation in both computational biology and molecular biology, and a growing expertise in laboratory techniques, he is well-positioned to develop innovative frameworks that unify large-scale multi-omics data, chromatin architecture studies, and precision medicine approaches to advance the understanding of cellular aging and to foster translational applications in therapeutic and pharmacogenomics research.
 
-You can view his brief CV below (all dates in decreasing order) and his full CV at: [Download my CV (PDF)]({static}/CV.pdf)
+You can view his brief CV below (all dates in decreasing order) and his full CV at: [Download my CV (PDF)](https://scholar.google.com/citations?user=erHz7L8AAAAJ&hl=en)
 You can reach him at eduardo.gusmao@tum-sls.de.
 
 ---
