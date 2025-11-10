@@ -1,6 +1,6 @@
 Title: Projects
 Slug: projects
-Date: 2025-08-02
+Date: 2025-11-10
 
 These are some of the computational tools and open science projects I’ve built or contributed to.
 
