@@ -11,8 +11,8 @@ THEME = 'themes/Flex'
 # SideBar Bio
 AUTHOR = 'Eduardo Gade Gusmao'
 TAGLINE = 'Bioinformatician, Professor and AI/ML/DL Researcher'
-SITELOGO = '/images/avatar.png'  # optional
-FAVICON = '/images/favicon.ico'  # optional
+# SITELOGO = '/images/avatar.png'  # optional
+# FAVICON = '/images/favicon.ico'  # optional
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -27,11 +27,13 @@ ARTICLE_PATHS = ["blog"]
 PAGE_PATHS = ["pages"]
 
 # Static paths
-STATIC_PATHS = ['images', 'extra/CV.pdf', 'extra/CNAME']
-EXTRA_PATH_METADATA = {
-    'extra/CV.pdf': {'path': 'CV.pdf'},
-    'extra/CNAME': {'path': 'CNAME'},
-}
+STATIC_PATHS = []
+EXTRA_PATH_METADATA = {}
+# STATIC_PATHS = ['images', 'cv/cv.pdf', 'extra/CNAME']
+# EXTRA_PATH_METADATA = {
+#     'extra/CV.pdf': {'path': 'CV.pdf'},
+#     'extra/CNAME': {'path': 'CNAME'},
+# }
 
 # Site structure
 PAGE_URL = '{slug}/'
@@ -63,7 +65,7 @@ MAIN_MENU = True
 MENUITEMS = (
     ('About', '/about.html'),
     ('Projects', '/projects.html'),
-    ('Writings', '/writing.html'),
+    ('Writing', '/writing.html'),
     ('Blog', '/blog.html'),
 )
 
