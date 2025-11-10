@@ -1,3 +1,5 @@
+# This file lives at: GusmaoLab/.github/workflows/deploy.yaml
+
 name: Deploy Pelican site to GitHub Pages
 
 on:
