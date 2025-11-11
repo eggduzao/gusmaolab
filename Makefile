@@ -8,9 +8,13 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
+# new: content dirs
+POSTDIR=$(INPUTDIR)/blog
+PAGEDIR=$(INPUTDIR)/pages
+DATE=$(shell date +%Y-%m-%d)
+
 GITHUB_PAGES_BRANCH=main
 GITHUB_PAGES_COMMIT_MESSAGE=Generate Pelican site
-
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -29,7 +33,6 @@ ifneq ($(PORT), 0)
 	PELICANOPTS += -p $(PORT)
 endif
 
-
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -43,6 +46,8 @@ help:
 	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
 	@echo '   make devserver-global               regenerate and serve on 0.0.0.0    '
 	@echo '   make github                         upload the web site via gh-pages   '
+	@echo '   make newpost title="My Title"       create a new blog post             '
+	@echo '   make newpage title="About"          create a new static page           '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -76,5 +81,42 @@ github: publish
 	ghp-import -m "$(GITHUB_PAGES_COMMIT_MESSAGE)" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)" --no-jekyll
 	git push origin $(GITHUB_PAGES_BRANCH)
 
+newpost:
+	@if [ -z "$(title)" ]; then \
+		echo "Usage: make newpost title=\"My post title\""; \
+		exit 1; \
+	fi
+	@mkdir -p "$(POSTDIR)"
+	@slug=$$(echo "$(title)" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd '[:alnum:]-'); \
+	filename="$(POSTDIR)/$(DATE)-$$slug.md"; \
+	echo "Creating $$filename"; \
+	{ \
+		echo "Title: $(title)"; \
+		echo "Date: $(DATE) 12:00"; \
+		echo "Category: blog"; \
+		echo "Tags: "; \
+		echo "Slug: $$slug"; \
+		echo "Authors: Eduardo G. Gusmão"; \
+		echo "Summary: "; \
+		echo ""; \
+		echo "Write your post here."; \
+	} > $$filename
 
-.PHONY: html help clean regenerate serve serve-global devserver devserver-global publish github
+newpage:
+	@if [ -z "$(title)" ]; then \
+		echo "Usage: make newpage title=\"About\""; \
+		exit 1; \
+	fi
+	@mkdir -p "$(PAGEDIR)"
+	@slug=$$(echo "$(title)" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd '[:alnum:]-'); \
+	filename="$(PAGEDIR)/$$slug.md"; \
+	echo "Creating $$filename"; \
+	{ \
+		echo "Title: $(title)"; \
+		echo "Save_as: $$slug.html"; \
+		echo "URL: $$slug.html"; \
+		echo ""; \
+		echo "Write your page here."; \
+	} > $$filename
+
+.PHONY: html help clean regenerate serve serve-global devserver devserver-global publish github newpost newpage

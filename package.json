@@ -1,0 +1,28 @@
+{
+  "name": "gusmaolab",
+  "version": "1.0.0",
+  "description": "This is the source folder for https://www.gusmaolab.org",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{md,markdown,yml,yaml,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggduzao/gusmaolab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/eggduzao/gusmaolab/issues"
+  },
+  "homepage": "https://github.com/eggduzao/gusmaolab#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
