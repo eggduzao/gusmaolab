@@ -11,11 +11,20 @@
 # 1. Minimal metadata block (required)
 # ------------------------------------------------------------------------------
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: mixed-line-ending
   - repo: https://github.com/psf/black
-    rev: 24.10.0
+    rev: 24.8.0
     hooks:
       - id: black
         language_version: python3.12
+        exclude: ^(output/|themes/|static/)
   # --------------------------------------------------------------------------
   # EXAMPLE: Core pre-commit hooks (formatting, trailing spaces, etc.)
   # Uncomment below to use standard pre-commit hooks.
@@ -89,7 +98,6 @@ repos:
   #       language: system
   #       always_run: false
   #       pass_filenames: false
-
 # ------------------------------------------------------------------------------
 # 2. Optional global settings (safe defaults)
 # ------------------------------------------------------------------------------

@@ -16,6 +16,7 @@ make github
 ```
 
 ---
+
 ---
 
 # **GusmaoLab**
@@ -23,6 +24,7 @@ make github
 Host Code of Eduardo G Gusmao's Lab Website Portfolio and Blogging
 
 ---
+
 ---
 
 ## **Building this Website:**
@@ -31,9 +33,10 @@ Host Code of Eduardo G Gusmao's Lab Website Portfolio and Blogging
 
 - **Step 1**: Inside Your web Micromamba Environment and Install Pelican
 
-Let's begin with the clean and correct Pelican setup inside your web micromamba environment.
+Let's begin with the clean and correct Pelican setup inside your web micromamba
+environment.
 
-___
+---
 
 _A. Activate Your Micromamba Web Env_
 
@@ -45,7 +48,7 @@ micromamba install -c conda-forge XXXX XXXX XXXX XXXX XXXX XXXX
 micromamba activate web
 ```
 
-___
+---
 
 _B. Create a Project Folder (Optional but Recommended)_
 
@@ -56,9 +59,11 @@ mkdir -p ~/Projects/gusmaolab
 cd ~/Projects/gusmaolab
 ```
 
-If you prefer to work inside the eggduzao.github.io repo directly, that's also fine — but I recommend keeping Pelican output and GitHub Pages cleanly separated (we'll connect them later via GitHub actions).
+If you prefer to work inside the eggduzao.github.io repo directly, that's also fine —
+but I recommend keeping Pelican output and GitHub Pages cleanly separated (we'll connect
+them later via GitHub actions).
 
-___
+---
 
 _C. Install Pelican and Markdown_
 
@@ -140,7 +145,7 @@ How many articles per page? [10]
 > Y
 ```
 
-___
+---
 
 _B. Folder Structure_
 
@@ -157,7 +162,7 @@ This creates a minimal Pelican structure, like:
 
 ---
 
-- **Step 3**: First Test Build_
+- **Step 3**: First Test Build\_
 
 _A. Making HTML Content_
 
@@ -167,7 +172,7 @@ Still inside that folder, make all HTML content:
 make html
 ```
 
-___
+---
 
 _B. Testing_
 
@@ -180,6 +185,7 @@ make serve
 Open http://localhost:8000 and admire your newborn Pelican site.
 
 ---
+
 ---
 
 ### Clean Python Tooling
@@ -220,8 +226,8 @@ markdown==3.5.2
 pelican==4.9.1
 ```
 
-> [!TIP]
-> You can later use pipreqs . --force to generate a minimal requirements.txt based only on actual imports (if you want to keep it clean).
+> [!TIP] You can later use pipreqs . --force to generate a minimal requirements.txt
+> based only on actual imports (if you want to keep it clean).
 
 ---
 
@@ -256,7 +262,8 @@ Create a file:
 echo "3.12" > .python-version
 ```
 
-This helps tools like pyenv, VSCode, and GitHub Actions stick to the correct interpreter version.
+This helps tools like pyenv, VSCode, and GitHub Actions stick to the correct interpreter
+version.
 
 ---
 
@@ -269,11 +276,12 @@ pip install poetry
 poetry init
 ```
 
-But since you're using micromamba, it's fine to stay with .txt and environment.txt for now.
+But since you're using micromamba, it's fine to stay with .txt and environment.txt for
+now.
 
 ---
 
-**Step 6** (Optional):  Add a README.md
+**Step 6** (Optional): Add a README.md
 
 You already have one in your GitHub repo — but here in gusmaolab, add a simple one too:
 
@@ -299,9 +307,11 @@ To deploy to GitHub Pages:
 make github
 ```
 ````
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-With this we are keeping it tight, clean, and fully reproducible. Professorial-grade engineering.
+With this we are keeping it tight, clean, and fully reproducible. Professorial-grade
+engineering.
 
 Project Snapshot so far:
 
@@ -324,18 +334,19 @@ gusmaolab/
 
 ### Pelican Blog + Portfolio Structure
 
-Time to shape your digital lab into a professorial site with blog + portfolio structure, simple but elegant — like a handwritten LaTeX equation on a napkin.
+Time to shape your digital lab into a professorial site with blog + portfolio structure,
+simple but elegant — like a handwritten LaTeX equation on a napkin.
 
 **Goal:** Build the following sections:
 
-|     Section   |   Type   | Folder                      | Purpose                                            |
+| Section       | Type     | Folder                      | Purpose                                            |
 | ------------- | -------- | --------------------------- | -------------------------------------------------- |
 | 🧬 Blog       | Articles | content/blog/               | Posts from categories 1.A to 1.D                   |
-| 🧾 About      |   Page   | content/pages/about.md      | Your academic + personal summary                   |
-| 🧰 Projects   |   Page   | content/pages/projects.md   | Descriptions & links to tools you've made          |
-| ✍️ Writings   |   Page   | content/pages/writing.md    | Excerpts from Mikrokosmos or safe fiction          |
-| 🧠 Philosophy |   Page   | content/pages/philosophy.md | Optional — Marxism, Freire, open science manifesto |
-| 🪪 CV         |  Static  | content/extra/CV.pdf        | Optional link to your CV (later)                   |
+| 🧾 About      | Page     | content/pages/about.md      | Your academic + personal summary                   |
+| 🧰 Projects   | Page     | content/pages/projects.md   | Descriptions & links to tools you've made          |
+| ✍️ Writings   | Page     | content/pages/writing.md    | Excerpts from Mikrokosmos or safe fiction          |
+| 🧠 Philosophy | Page     | content/pages/philosophy.md | Optional — Marxism, Freire, open science manifesto |
+| 🪪 CV         | Static   | content/extra/CV.pdf        | Optional link to your CV (later)                   |
 
 ---
 
@@ -439,7 +450,7 @@ Then, create the following:
 ```
 Title: About
 
-Eduardo Gade Gusmao is a Brazilian bioinformatician, professor, and writer.  
+Eduardo Gade Gusmao is a Brazilian bioinformatician, professor, and writer.
 
 This site hosts his lab notes, blog posts, creative experiments, and tools for science, pedagogy, and beyond.
 
@@ -461,13 +472,13 @@ With a placeholder like:
 ```
 Title: Projects
 
-### Bloom  
+### Bloom
 A deep-learning framework for scHi-C chromatin architecture discovery.
 
-### Stainalyzer  
+### Stainalyzer
 A lightweight, open-source pipeline for histopathological image segmentation and staining quantification.
 
-### TryDInn  
+### TryDInn
 A three-tiered architecture for intelligent missing data imputation in EHRs and omics.
 
 [More coming soon...]
@@ -484,21 +495,23 @@ make html
 make serve
 ```
 
-And then, open your "local" website at: http://localhost:8000 (it will say where after the serve command).
+And then, open your "local" website at: http://localhost:8000 (it will say where after
+the serve command).
 
 And then check your:
+
 - Blog at /blog/first-post/
 - About at /about/
 - Projects at /projects/
 
-> [!NOTE]
-> Do not forget to kill the job later!
+> [!NOTE] Do not forget to kill the job later!
 
 ---
 
 ### GitHub the Project and Activate Flex Theme
 
-Time to shape your digital lab into a professorial site with blog + portfolio structure, simple but elegant — like a handwritten LaTeX equation on a napkin.
+Time to shape your digital lab into a professorial site with blog + portfolio structure,
+simple but elegant — like a handwritten LaTeX equation on a napkin.
 
 **Goal:** Set the GitHub Foundations and choose a better theme and beautify the website.
 
@@ -519,7 +532,9 @@ git init
 git status
 ```
 
-Make sure every "trash/eraseable file" types are in `.gitingore`. If you are on MAC OS X (like me), you might want to add the following (or create a `./clean.sh` to remove these files):
+Make sure every "trash/eraseable file" types are in `.gitingore`. If you are on MAC OS X
+(like me), you might want to add the following (or create a `./clean.sh` to remove these
+files):
 
 ```bash
 echo -e ".DS_Store\n.Trashes\n.AppleDouble\n.LSOverride\n._*" >> .gitignore
@@ -532,11 +547,12 @@ git add .
 git commit -m "Initial commit: Eduardo's beaututiful site begins"
 ```
 
-___
+---
 
 _B. Push to GitHub_
 
-Since we want to have GitHub Pages auto-deploy later, let's create a repo called gusmaolab on GitHub.
+Since we want to have GitHub Pages auto-deploy later, let's create a repo called
+gusmaolab on GitHub.
 
 Then:
 
@@ -548,9 +564,9 @@ git push -u origin main
 
 And replace <yourusername> with your GitHub UserName handle.
 
-___
+---
 
-**Step 2**: Install the Flex theme 
+**Step 2**: Install the Flex theme
 
 Inside your Pelican project root:
 
@@ -585,13 +601,13 @@ git submodule update --init --recursive
 
 Otherwise the themes/Flex folder will appear empty, and the site will crash.
 
---- 
+---
 
 **Step 3**: Update pelicanconf.py
 
 Inside the `pelicanconf.py` file. Set the theme:
 
-``` 
+```
 THEME = 'themes/Flex'
 ```
 
@@ -659,7 +675,7 @@ make serve
 
 And then, check the new website at your "local" server at: http://localhost:8000.
 
-___
+---
 
 _Optional Extra-Glam_
 
@@ -668,20 +684,23 @@ _Optional Extra-Glam_
 Put your avatar (avatar.png) and favicon (favicon.ico) in content/images/.
 
 ---
+
 ---
 
 ### GitHub Action for Auto-Deployment
 
-Building a clean separation between your Pelican source (gusmaolab/) and your publishing repo (eggduzao.github.io/) is the ideal and most professional website-deployment method.
+Building a clean separation between your Pelican source (gusmaolab/) and your publishing
+repo (eggduzao.github.io/) is the ideal and most professional website-deployment method.
 
 Currently we have:
 
-|       Role       |            Repo             |
-|------------------|-----------------------------|
-|  Pelican source  |     eggduzao/gusmaolab      |
+| Role             | Repo                        |
+| ---------------- | --------------------------- |
+| Pelican source   | eggduzao/gusmaolab          |
 | HTML deployed to | eggduzao/eggduzao.github.io |
 
 **GOAL**: Set up a GitHub Action in gusmaolab to:
+
 - Build Pelican content
 - Push the generated output/ to the root of the eggduzao.github.io repo (overwriting)
 - Trigger a deploy via GitHub Pages automatically
@@ -692,20 +711,17 @@ Currently we have:
 
 Because this is a cross-repo deploy, we can't rely on the default GITHUB_TOKEN.
 
-1. Go to https://github.com/settings/tokens
-    •   Click "Generate new token (classic)"
-    •   Name: GusmaoLabPagesDeploy
-    •   Expiration: 90 days, 6 months, or No expiration
-    •   Scopes: ✅ repo (you only need this one)
+1. Go to https://github.com/settings/tokens • Click "Generate new token (classic)" •
+   Name: GusmaoLabPagesDeploy • Expiration: 90 days, 6 months, or No expiration •
+   Scopes: ✅ repo (you only need this one)
 
 Copy the token — you won't see it again.
 
 ---
 
-**Step 2**: Add the PAT as a Secret in gusmaolab
-    1.  Go to: eggduzao/gusmaolab → Settings → Secrets and variables → Actions → New repository secret
-    2.  Name: PAGES_DEPLOY_TOKEN
-    3.  Value: your token from step A
+**Step 2**: Add the PAT as a Secret in gusmaolab 1. Go to: eggduzao/gusmaolab → Settings
+→ Secrets and variables → Actions → New repository secret 2. Name: PAGES_DEPLOY_TOKEN 3.
+Value: your token from step A
 
 ---
 
@@ -713,8 +729,7 @@ Copy the token — you won't see it again.
 
 In your local ~/Projects/gusmaolab/:
 
-mkdir -p .github/workflows
-touch .github/workflows/deploy.yml
+mkdir -p .github/workflows touch .github/workflows/deploy.yml
 
 Paste this:
 
@@ -723,38 +738,38 @@ name: Deploy Pelican site to GitHub Pages
 
 on:
   push:
-    branches: [main]  # or "master", depending on your default
+    branches: [main] # or "master", depending on your default
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 📥 Checkout source
-      uses: actions/checkout@v4
+      - name: 📥 Checkout source
+        uses: actions/checkout@v4
 
-    - name: 🐍 Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-    - name: 🧪 Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pelican markdown
+      - name: 🧪 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pelican markdown
 
-    - name: 🛠️ Build site
-      run: pelican content -s publishconf.py
+      - name: 🛠️ Build site
+        run: pelican content -s publishconf.py
 
-    - name: 🚀 Deploy to GitHub Pages repo
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-        external_repository: eggduzao/eggduzao.github.io
-        publish_dir: ./output
-        publish_branch: main  # or master, depending on that repo's default
-        user_name: "Eduardo Gusmao"
-        user_email: "eduardogade@gmail.com"
+      - name: 🚀 Deploy to GitHub Pages repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          external_repository: eggduzao/eggduzao.github.io
+          publish_dir: ./output
+          publish_branch: main # or master, depending on that repo's default
+          user_name: "Eduardo Gusmao"
+          user_email: "eduardogade@gmail.com"
 ```
 
 ---
@@ -762,6 +777,7 @@ jobs:
 **Step 4**: Configure eggduzao.github.io Repo
 
 Go to Settings > Pages of eggduzao.github.io:
+
 - Source: Deploy from a branch
 - Branch: main or master (whatever the default is)
 - Folder: / (root)
@@ -783,10 +799,10 @@ git push origin main
 
 **Step 6**: Watch It Run
 
-Go to gusmaolab → Actions tab.
-You'll see the "Deploy Pelican site..." workflow run.
+Go to gusmaolab → Actions tab. You'll see the "Deploy Pelican site..." workflow run.
 
 If all goes well, you'll see:
+
 - Green ✅ build
 - New files in eggduzao.github.io repo
 - www.gusmaolab.org updates automatically
@@ -795,11 +811,12 @@ If all goes well, you'll see:
 
 > Optional Tweaks
 
-1. Add a README.md to eggduzao.github.io   So visitors to the repo don't get a blank directory
-2. Add .nojekyll to output/    To prevent GitHub from misinterpreting underscores (Pelican does this automatically)
-3. Schedule auto-rebuilds  Add on: schedule: to run every night, week, etc.
-
+1. Add a README.md to eggduzao.github.io So visitors to the repo don't get a blank
+   directory
+2. Add .nojekyll to output/ To prevent GitHub from misinterpreting underscores (Pelican
+   does this automatically)
+3. Schedule auto-rebuilds Add on: schedule: to run every night, week, etc.
 
 ---
----
 
+---

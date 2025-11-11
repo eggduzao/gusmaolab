@@ -11,7 +11,7 @@ dependencies:
   - pygments
   - unidecode
   - feedgenerator
-  - click  # pelican uses click under the hood
+  - click # pelican uses click under the hood
   # optional but often useful for Pelican sites
   - pip
   - ca-certificates
@@ -26,3 +26,4 @@ dependencies:
       - typogrify
       - markdown-it-py
       - mdurl
+      - pre-commit

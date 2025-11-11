@@ -86,6 +86,13 @@ ipython_config.py
 #   For a library or package, you might want to ignore these files since the code is
 #   intended to run in multiple environments; otherwise, check them in:
 # .python-version
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv
+.mypy_cache/
+.pytype/
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
@@ -174,7 +181,7 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
 
 # Abstra
 # Abstra is an AI-powered process automation framework.
@@ -183,11 +190,11 @@ cython_debug/
 .abstra/
 
 # Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
+#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore
 #  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
+#  and can be added to the global gitignore or merged into this file. However, if you prefer,
 #  you could uncomment the following to ignore the entire vscode folder
-# .vscode/
+.vscode/
 
 # Ruff stuff:
 .ruff_cache/
@@ -212,9 +219,21 @@ __marimo__/
 *.pyo
 *.pyd
 
-#Pelican
+# Pelican build
 output/
 cache/
+*.log
+
+# Backups (optional: comment out if you want to version them)
+# backup/
+
+# Cache Data
+data/viz_cache/
+
+# node / js
+node_modules/
+package-lock.json
+npm-debug.log*
 
 # Ignore all files inside Flex, but keep the submodule pointer
 themes/Flex/*
@@ -223,13 +242,13 @@ themes/Flex/*
 # Micromamba
 .micromamba/
 
-# MAC
+# OS
 .DS_Store
 .Trashes
 ._*
 .AppleDouble
 .LSOverride
+Thumbs.db
 
 # Logo
 _logo/
-
