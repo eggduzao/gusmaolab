@@ -1,0 +1,28 @@
+name: web
+channels:
+  - conda-forge
+dependencies:
+  # core
+  - python=3.12
+  - pelican=4.11
+  - pillow
+  - markdown
+  - docutils
+  - pygments
+  - unidecode
+  - feedgenerator
+  - click  # pelican uses click under the hood
+  # optional but often useful for Pelican sites
+  - pip
+  - ca-certificates
+  - openssl
+
+  - pip:
+      # pelican-land extra plugins (install only what you actually use)
+      # - pelican-neighbors
+      # - pelican-sitemap
+      # - pelican-render-math
+      # markdown extras
+      - typogrify
+      - markdown-it-py
+      - mdurl
