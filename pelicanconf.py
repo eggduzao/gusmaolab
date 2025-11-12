@@ -26,11 +26,23 @@ ARTICLE_PATHS = ["blog"]
 PAGE_PATHS = ["pages"]
 
 # Static paths
-STATIC_PATHS = ["images", "extra/CV.pdf", "extra/CNAME"]
+STATIC_PATHS = [
+    "images",
+    "extra/CV.pdf",
+    "extra/CNAME",
+    "static",
+]
 EXTRA_PATH_METADATA = {
     "extra/CV.pdf": {"path": "CV.pdf"},
     "extra/CNAME": {"path": "CNAME"},
 }
+
+# Override templates from the theme
+THEME_TEMPLATES_OVERRIDES = ["themes/GusmaoLab/templates"]
+
+# Where Pelican will put theme static files in the output
+THEME_STATIC_DIR = "theme"
+CUSTOM_CSS = "static/css/tokens.css"
 
 # Site structure
 PAGE_URL = "{slug}/"

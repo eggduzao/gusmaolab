@@ -250,5 +250,6 @@ themes/Flex/*
 .LSOverride
 Thumbs.db
 
-# Logo
+# Logo and Temp
 _logo/
+_tmp/
