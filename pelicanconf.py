@@ -11,7 +11,7 @@ THEME = "themes/Flex"
 AUTHOR = "Eduardo Gade Gusmao"
 TAGLINE = "Bioinformatician, Professor and AI/ML/DL Researcher"
 SITELOGO = "images/brand/website-128.png"
-FAVICON = "images/favicons/website-favicon.ico"
+FAVICON = "images/favicons/favicon.ico"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
