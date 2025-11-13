@@ -1,0 +1,140 @@
+/* GusmaoLab Design Tokens
+   Scope: global (:root) so Flex + overrides can consume them.
+   Edit only tokens; avoid hardcoding colors elsewhere.
+*/
+
+/* 1) COLOR SYSTEM */
+:root {
+  /* neutrals */
+  --color-bg: #ffffff;
+  --color-surface: #f7f7f9;
+  --color-border: #e3e3ea;
+  --color-text: #14151a;
+  --color-muted: #5b5e6a;
+
+  /* brand */
+  --color-accent: #2463eb;          /* blue-600 vibe */
+  --color-accent-contrast: #ffffff; /* text on accent */
+  --color-link: var(--color-accent);
+
+  /* code & selection */
+  --color-code-bg: #f3f4f6;
+  --color-selection-bg: #cde2ff;
+
+  /* feedback (optional, handy for notices) */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger:  #dc2626;
+}
+
+/* 2) SPACING SCALE (multiples of 4px) */
+:root {
+  --space-0: 0;
+  --space-1: 0.25rem; /* 4px  */
+  --space-2: 0.5rem;  /* 8px  */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem;    /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem;  /* 24px */
+  --space-8: 2rem;    /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem;   /* 48px */
+}
+
+/* 3) RADII */
+:root {
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+}
+
+/* 4) SHADOWS */
+:root {
+  --shadow-1: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-2: 0 4px 12px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.08);
+  --shadow-3: 0 10px 24px rgba(0,0,0,.16), 0 6px 12px rgba(0,0,0,.10);
+}
+
+/* 5) CONTENT WIDTH (used on long-form pages) */
+:root {
+  --content-max: 70ch; /* readable line length */
+}
+
+
+/* Automatic dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0d0f14;
+    --color-surface: #151922;
+    --color-border: #242a36;
+    --color-text: #e9ecf1;
+    --color-muted: #a8b0bf;
+
+    --color-accent: #6aa8ff;            /* lighten accent in dark */
+    --color-accent-contrast: #0b1020;
+    --color-link: var(--color-accent);
+
+    --color-code-bg: #151a22;
+    --color-selection-bg: #224a88;
+  }
+}
+
+
+/* Base surfaces */
+html, body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Links */
+a {
+  color: var(--color-link);
+  text-decoration-color: color-mix(in oklab, var(--color-link), transparent 70%);
+}
+a:hover, a:focus {
+  text-decoration-color: var(--color-link);
+}
+
+/* Main content width & rhythm */
+article, .content, .container, .page, .post {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+/* Cards / panels commonly used by Flex */
+.card, .sidebar, .post, .page, .pagination {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+/* Code blocks */
+pre, code, kbd, samp {
+  background: var(--color-code-bg);
+  border-radius: var(--radius-sm);
+}
+pre {
+  padding: var(--space-4);
+  overflow: auto;
+}
+
+/* Images */
+img {
+  border-radius: var(--radius-sm);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-selection-bg);
+}
+
+/* Spacing helpers (tiny utility set you can reuse in templates) */
+.mt-4 { margin-top: var(--space-4); }
+.mb-4 { margin-bottom: var(--space-4); }
+.p-4  { padding: var(--space-4); }
+.rounded { border-radius: var(--radius-md); }
+.shadow-1 { box-shadow: var(--shadow-1); }
