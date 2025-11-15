@@ -41,57 +41,34 @@ DOB: 1990-12-02
 
 Areas of Study/Research/Leisure Interest (current research in **bold**):
 
-    1. Biology/Medical-Related Fields:
-
-    	- **Chromatin Molecular Biology.**
-
-    	- **Computational Biology / Health Informatics / Translational Medicine.**
-
-    	- Regulatory and Epigenetic Control of Gene Regulation.
-
-    	- Multi-Omics Techniques with Single-Cell and Spatially Resolved Variants.
-
-    	- **Public Health and Populational Genomics.**
-
-    2. Computational Fields:
-
-    	- Artificial Intelligence > Machine Learning.
-
-    	- **Deep Learning: Classical, Attention-Based & Variational Approaches.**
-
-    	- Deep Learning: Graph & Hypergraph Neural Networks.
-
-    	- **Artificial Intelligence / Deep Learning: Self-Supervision, Transfer Learning and Meta-Learning.**
-
-    	- Algorithmic Information Theory > Kolmogorov-Complexity
-
-    3. Applied and Pure Mathematical Fields:
-
-    	- Probability Theory and Statistical Applicability.
-
-    	- Calculus, Numeric Analysis and Computational Representation.
-
-    	- **Category Theory.**
+  1. Biology/Medical-Related Fields:
+  	- **Chromatin Molecular Biology.**
+  	- **Computational Biology / Health Informatics / Translational Medicine.**
+  	- Regulatory and Epigenetic Control of Gene Regulation.
+  	- Multi-Omics Techniques with Single-Cell and Spatially Resolved Variants.
+  	- **Public Health and Populational Genomics.**
+  2. Computational Fields:
+  	- Artificial Intelligence > Machine Learning.
+  	- **Deep Learning: Classical, Attention-Based & Variational Approaches.**
+  	- Deep Learning: Graph & Hypergraph Neural Networks.
+  	- **Artificial Intelligence / Deep Learning: Self-Supervision, Transfer Learning and Meta-Learning.**
+  	- Algorithmic Information Theory > Kolmogorov-Complexity
+  3. Applied and Pure Mathematical Fields:
+  	- Probability Theory and Statistical Applicability.
+  	- Calculus, Numeric Analysis and Computational Representation.
+  	- **Category Theory.**
 
 Languages:
 
-    - Portuguese (Native).
-
-    - English (Full Professional Proficiency).
-
-    - Spanish (Full Professional Proficiency).
-
-    - German (Intermediate Proficiency).
-
-    - Italian (Intermediate Proficiency).
-
-    - Finnish (Intermediate Proficiency).
-
-    - French (Intermediate Proficiency).
-
-    - Dutch (Basic Proficiency).
-
-    - Chinese - Mandarim (Basic Proficiency).
+  - Portuguese (Native).
+  - English (Full Professional Proficiency).
+  - Spanish (Full Professional Proficiency).
+  - German (Intermediate Proficiency).
+  - Italian (Intermediate Proficiency).
+  - Finnish (Intermediate Proficiency).
+  - French (Intermediate Proficiency).
+  - Dutch (Basic Proficiency).
+  - Chinese - Mandarim (Basic Proficiency).
 
 Current number of pages **fully understood** of
 [James Joyce's Finnegans Wake](https://github.com/eggduzao/gusmaolab/): 77/628

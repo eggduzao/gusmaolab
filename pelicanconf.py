@@ -10,8 +10,8 @@ THEME = "themes/Flex"
 # SideBar Bio
 AUTHOR = "Eduardo Gade Gusmao"
 TAGLINE = "Bioinformatician, Professor and AI/ML/DL Researcher"
-SITELOGO = "images/brand/website-128.png"
-FAVICON = "images/favicons/website-favicon.ico"
+SITELOGO = "/images/brand/website-128.png"
+FAVICON = "/images/favicons/website-favicon.ico"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -38,7 +38,7 @@ EXTRA_PATH_METADATA = {
 }
 
 # Override templates from the theme
-THEME_TEMPLATES_OVERRIDES = ["themes/GusmaoLab/templates"]
+# THEME_TEMPLATES_OVERRIDES = ["themes/GusmaoLab/templates"]
 
 # Where Pelican will put theme static files in the output
 THEME_STATIC_DIR = "theme"
@@ -75,8 +75,9 @@ MENUITEMS = (
     ("About", "/about/"),
     ("Projects", "/projects/"),
     ("Writing", "/writing/"),
-    ("Blog", "/blog/"),
+    ("Blog", "/category/blog.html"),
 )
+
 
 # Enable Flex features
 USE_FOLDER_AS_CATEGORY = True
