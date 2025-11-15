@@ -63,6 +63,33 @@
   --content-max: 70ch; /* readable line length */
 }
 
+/* 6) TYPOGRAPHY */
+:root {
+  /* Font stacks */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace;
+
+  /* Type scale (modular-ish, ratio ~1.25) */
+  --fs-body: 1rem;          /* 16px */
+  --fs-small: 0.875rem;     /* 14px */
+  --fs-code: 0.9rem;        /* slightly smaller */
+  --fs-h3: 1.25rem;         /* 20px */
+  --fs-h2: 1.563rem;        /* ~25px */
+  --fs-h1: 2.441rem;        /* ~39px */
+
+  /* Responsive clamp for really big titles (hero headings, optional) */
+  --fs-display: clamp(2.5rem, 4vw, 3.5rem);
+
+  /* Line heights */
+  --lh-body: 1.6;
+  --lh-heading: 1.25;
+  --lh-tight: 1.2;
+
+  /* Content max width (we already had this, keep or adjust) */
+  --content-max: 72ch;  /* sweet spot between 70–85 characters */
+}
 
 /* Automatic dark theme */
 @media (prefers-color-scheme: dark) {
@@ -87,6 +114,17 @@
 html, body {
   background: var(--color-bg);
   color: var(--color-text);
+}
+
+/* Base text */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* Links */
@@ -138,3 +176,111 @@ img {
 .p-4  { padding: var(--space-4); }
 .rounded { border-radius: var(--radius-md); }
 .shadow-1 { box-shadow: var(--shadow-1); }
+
+/* Headings hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: var(--lh-heading);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4, h5, h6 {
+  font-size: var(--fs-body);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* Flex-specific titles */
+.post-title, .page-title, .article-title {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-heading);
+  margin-bottom: var(--space-4);
+}
+
+.post-title a, .article-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.post-title a:hover, .article-title a:hover {
+  text-decoration: underline;
+}
+
+/* Main reading column: limit line length */
+article,
+.post,
+.page,
+.content,
+.main,
+#content {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+/* Paragraphs & lists */
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+ul, ol {
+  padding-left: var(--space-6);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+li + li {
+  margin-top: var(--space-1);
+}
+
+/* Inline code */
+code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: var(--fs-code);
+  line-height: var(--lh-tight);
+  background: var(--color-code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-xs);
+}
+
+/* Code blocks */
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--fs-code);
+  line-height: var(--lh-tight);
+  background: var(--color-code-bg);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  overflow: auto;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+/* Avoid double padding when theme nests code inside pre */
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+small,
+.meta,
+.post-meta,
+.footer,
+.footer a {
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
