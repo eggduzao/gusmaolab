@@ -71,13 +71,14 @@ SOCIAL = (
 
 # Menu items
 MAIN_MENU = True
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
-    ("About", "/about/"),
-    ("Projects", "/projects/"),
-    ("Writing", "/writing/"),
+    ("Portfolio", "/portfolio/"),
     ("Blog", "/category/blog.html"),
+    ("About", "/about/"),
+    ("Contact", "/contact/"),
 )
-
 
 # Enable Flex features
 USE_FOLDER_AS_CATEGORY = True
