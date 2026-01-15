@@ -250,6 +250,8 @@ themes/Flex/*
 .LSOverride
 Thumbs.db
 
-# Logo and Temp
+# Worspace Locations
 _logo/
 _tmp/
+_books/
+_papers/
