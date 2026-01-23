@@ -15,7 +15,7 @@ Audience: Professionals, Industry, Researchers
 Methodology: Reanalysis / Replication / Critical Review
 Data_source: Public / Proprietary / Simulated
 Reproducibility: Partial / Full
-Canonical: https://www.gusmaolab.org/blog/case-studies/title/
+Canonical: https://www.gusmaolab.org/blog/c05-case-studies/title/
 Cover: images/covers/case-study.png
 Thumbnail: images/thumbnails/case-study-thumb.png
 Meta_description: A technical case study offering professional insight into real-world ML and bioinformatics problems.
