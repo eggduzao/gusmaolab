@@ -19,7 +19,7 @@ Audience: Students, Researchers, Practitioners
 Estimated_reading_time: 15–25 minutes
 Prerequisites: Linear algebra, basic Python
 Learning_objectives: Conceptual understanding, practical intuition
-Canonical: https://www.gusmaolab.org/blog/guided-series/series-name/
+Canonical: https://www.gusmaolab.org/blog/c01-guided-series/series-name/
 Cover: images/covers/guided-series.png
 Thumbnail: images/thumbnails/guided-series-thumb.png
 Meta_description: A structured, professional tutorial series on machine learning and bioinformatics.

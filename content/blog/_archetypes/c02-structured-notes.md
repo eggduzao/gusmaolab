@@ -15,7 +15,7 @@ Template: article
 Difficulty: Advanced
 Audience: Graduate students, researchers
 Prerequisites: Mathematical maturity
-Canonical: https://www.gusmaolab.org/blog/structured-notes/topic/
+Canonical: https://www.gusmaolab.org/blog/c02-structured-notes/topic/
 Reference_style: Academic
 Notation_policy: Explicitly defined
 Update_policy: Stable with revisions

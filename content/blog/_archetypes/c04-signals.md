@@ -13,7 +13,7 @@ Template: article
 Cadence: Weekly
 Scope: Research, Industry, Open Science
 Tone: Analytical, Non-Sensational
-Canonical: https://www.gusmaolab.org/blog/signals/2026-01/
+Canonical: https://www.gusmaolab.org/blog/c04-signals/2026-01/
 Meta_description: Weekly analysis of important developments in machine learning and bioinformatics.
 Meta_keywords: ai news, bioinformatics updates, research signals
 Cover: images/covers/signals.png
