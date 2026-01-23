@@ -30,11 +30,6 @@ STATIC_PATHS = [
     "images",
     "extra/CV.pdf",
     "extra/CNAME",
-    "static",
-    "img",
-    "brand",
-    "static/img/brand/bullet-header-5.png",
-    "static/img/brand/bullet-header-5.svg",
 ]
 
 EXTRA_PATH_METADATA = {

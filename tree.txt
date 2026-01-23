@@ -1,0 +1,788 @@
+.
+├── _books/
+├── _logo/
+├── _papers/
+├── backup/
+├── brand/
+│		├── gusmaolab-logo.svg
+│		├── kit/
+│		│		└── gusmaolab-brand-kit.zip
+│		└── project-logos/
+│		    ├── bloom/
+│		    │		├── bloom-mark.svg
+│		    │		└── bloom-wordmark.svg
+│		    └── stainalyzer/
+│		        ├── stainalyzer-mark.svg
+│		        └── stainalyzer-wordmark.svg
+├── clean.sh
+├── content/
+│		├── blog/
+│		│		├── _archetypes/
+│		│		│		├── c01-guided-series.md
+│		│		│		├── c02-structured-notes.md
+│		│		│		├── c03-one-pagers.md
+│		│		│		├── c04-signals.md
+│		│		│		└── c05-case-studies.md
+│		│		├── 2025-08-02-welcome.md
+│		│		├── c01-guided-series/
+│		│		├── c02-structured-notes/
+│		│		├── c03-one-pagers/
+│		│		├── c04-signals/
+│		│		└── c05-case-studies/
+│		├── data/
+│		│		├── leaderboard.sample.json
+│		│		├── leaderboard.schema.json
+│		│		├── profile.json
+│		│		├── projects.json
+│		│		├── resources.json
+│		│		└── search_synonyms.json
+│		├── downloads/
+│		│		└── kits/
+│		├── extra/
+│		│		├── CNAME
+│		│		├── CV.pdf
+│		│		├── humans.txt
+│		│		├── robots.txt
+│		│		└── security.txt
+│		├── images/
+│		│		├── brand/
+│		│		│		└── website-128.png
+│		│		├── favicons/
+│		│		│		└── website-favicon.ico
+│		│		├── posts/
+│		│		├── social/
+│		│		└── team/
+│		├── pages
+│		│		├── 404.md
+│		│		├── 410.md
+│		│		├── about_.md
+│		│		├── about.md
+│		│		├── brand.md
+│		│		├── challenges.md
+│		│		├── contact.md
+│		│		├── learning.md
+│		│		├── licenses.md
+│		│		├── portfolio_.md
+│		│		├── portfolio.md
+│		│		├── press.md
+│		│		├── privacy.md
+│		│		├── publications.md
+│		│		├── resources.md
+│		│		├── search.md
+│		│		├── styleguide.md
+│		│		├── talks.md
+│		│		├── teaching.md
+│		│		├── team_members.md
+│		│		├── terms.md
+│		│		├── thanks.md
+│		│		└── writing.md
+│		└── static
+│		    ├── css
+│		    │		└── tokens.css
+│		    └── img
+│		        └── brand
+│		            ├── bullet-header-5.png
+│		            └── bullet-header-5.svg
+├── content-pt
+│		├── blog
+│		└── pages
+│		    ├── aprendizado.md
+│		    ├── contato.md
+│		    ├── ensino.md
+│		    ├── equipe.md
+│		    ├── licencas.md
+│		    ├── privacidade.md
+│		    ├── projetos.md
+│		    ├── recursos.md
+│		    ├── sobre.md
+│		    └── termos.md
+├── cv
+│		├── cv.md
+│		└── template.tex
+├── data
+│		├── build_times.csv
+│		├── search_index.json
+│		└── viz_cache
+├── docs
+│		├── a11y-checklist.md
+│		├── build-env.md
+│		├── challenges-automation.md
+│		├── challenges-overview.md
+│		├── challenges-repo
+│		│		├── CONTRIBUTING.md
+│		│		└── PULL_REQUEST_TEMPLATE.md
+│		├── design-system.md
+│		├── hyperglam-a11y.md
+│		├── hyperglam-metrics.md
+│		├── org
+│		│		├── website_todo_v1.txt
+│		│		├── website_todo_v2.txt
+│		│		├── website_todo_v3.txt
+│		│		├── website_tree_v3.sh
+│		│		└── website_tree_v3.txt
+│		├── publishing.md
+│		├── search-tests.md
+│		└── seo
+│		    ├── search-console-proofshots.md
+│		    └── structured-data-notes.md
+├── environment.txt
+├── environment.yml
+├── hyperglam
+│		├── cards
+│		│		└── tilt.js
+│		├── nucleus
+│		│		├── nucleus.js
+│		│		└── nucleus.svg
+│		└── sandboxes
+│		    ├── common
+│		    └── kmeans
+│		        ├── demo.html
+│		        └── worker.js
+├── LICENSE
+├── Makefile
+├── node_modules
+│		└── prettier
+│		    ├── bin
+│		    │		└── prettier.cjs
+│		    ├── doc.d.ts
+│		    ├── doc.js
+│		    ├── doc.mjs
+│		    ├── index.cjs
+│		    ├── index.d.ts
+│		    ├── index.mjs
+│		    ├── internal
+│		    │		├── experimental-cli-worker.mjs
+│		    │		├── experimental-cli.mjs
+│		    │		└── legacy-cli.mjs
+│		    ├── LICENSE
+│		    ├── package.json
+│		    ├── plugins
+│		    │		├── acorn.d.ts
+│		    │		├── acorn.js
+│		    │		├── acorn.mjs
+│		    │		├── angular.d.ts
+│		    │		├── angular.js
+│		    │		├── angular.mjs
+│		    │		├── babel.d.ts
+│		    │		├── babel.js
+│		    │		├── babel.mjs
+│		    │		├── estree.d.ts
+│		    │		├── estree.js
+│		    │		├── estree.mjs
+│		    │		├── flow.d.ts
+│		    │		├── flow.js
+│		    │		├── flow.mjs
+│		    │		├── glimmer.d.ts
+│		    │		├── glimmer.js
+│		    │		├── glimmer.mjs
+│		    │		├── graphql.d.ts
+│		    │		├── graphql.js
+│		    │		├── graphql.mjs
+│		    │		├── html.d.ts
+│		    │		├── html.js
+│		    │		├── html.mjs
+│		    │		├── markdown.d.ts
+│		    │		├── markdown.js
+│		    │		├── markdown.mjs
+│		    │		├── meriyah.d.ts
+│		    │		├── meriyah.js
+│		    │		├── meriyah.mjs
+│		    │		├── postcss.d.ts
+│		    │		├── postcss.js
+│		    │		├── postcss.mjs
+│		    │		├── typescript.d.ts
+│		    │		├── typescript.js
+│		    │		├── typescript.mjs
+│		    │		├── yaml.d.ts
+│		    │		├── yaml.js
+│		    │		└── yaml.mjs
+│		    ├── README.md
+│		    ├── standalone.d.ts
+│		    ├── standalone.js
+│		    ├── standalone.mjs
+│		    └── THIRD-PARTY-NOTICES.md
+├── output
+│		├── about
+│		│		└── index.html
+│		├── about_
+│		│		└── index.html
+│		├── archives.html
+│		├── author
+│		│		├── eduardo-gade-gusmao.html
+│		│		└── eduardo-gusmao.html
+│		├── authors.html
+│		├── blog
+│		│		├── deepdiveseries
+│		│		│		└── index.html
+│		│		├── releasenotes
+│		│		│		└── index.html
+│		│		├── sundaylogblog
+│		│		│		└── index.html
+│		│		├── tutorialseries
+│		│		│		└── index.html
+│		│		└── welcome
+│		│		    └── index.html
+│		├── brand
+│		│		└── index.html
+│		├── categories.html
+│		├── category
+│		│		├── admin.html
+│		│		├── blog.html
+│		│		└── series.html
+│		├── challenges
+│		│		└── index.html
+│		├── CNAME
+│		├── contact
+│		│		└── index.html
+│		├── CV.pdf
+│		├── error404
+│		│		└── index.html
+│		├── error410
+│		│		└── index.html
+│		├── images
+│		│		├── brand
+│		│		│		└── website-128.png
+│		│		└── favicons
+│		│		    └── website-favicon.ico
+│		├── index.html
+│		├── learning
+│		│		└── index.html
+│		├── licenses
+│		│		└── index.html
+│		├── portfolio
+│		│		└── index.html
+│		├── portfolio_
+│		│		└── index.html
+│		├── press
+│		│		└── index.html
+│		├── privacy
+│		│		└── index.html
+│		├── publications
+│		│		└── index.html
+│		├── resources
+│		│		└── index.html
+│		├── search
+│		│		└── index.html
+│		├── static
+│		│		└── css
+│		│		    └── tokens.css
+│		├── styleguide
+│		│		└── index.html
+│		├── tag
+│		│		├── deep.html
+│		│		├── dive.html
+│		│		├── log.html
+│		│		├── notes.html
+│		│		├── pelican.html
+│		│		├── release.html
+│		│		├── sunday.html
+│		│		├── tutorial.html
+│		│		└── welcome.html
+│		├── tags.html
+│		├── talks
+│		│		└── index.html
+│		├── teaching
+│		│		└── index.html
+│		├── teammembers
+│		│		└── index.html
+│		├── terms
+│		│		└── index.html
+│		├── thanks
+│		│		└── index.html
+│		├── theme
+│		│		├── dark-theme
+│		│		│		├── dark-theme.js
+│		│		│		└── dark-theme.min.js
+│		│		├── font-awesome
+│		│		│		├── css
+│		│		│		│		├── brands.css
+│		│		│		│		├── fontawesome.css
+│		│		│		│		└── solid.css
+│		│		│		└── webfonts
+│		│		│		    ├── fa-brands-400.ttf
+│		│		│		    ├── fa-brands-400.woff2
+│		│		│		    ├── fa-regular-400.ttf
+│		│		│		    ├── fa-regular-400.woff2
+│		│		│		    ├── fa-solid-900.ttf
+│		│		│		    ├── fa-solid-900.woff2
+│		│		│		    ├── fa-v4compatibility.ttf
+│		│		│		    └── fa-v4compatibility.woff2
+│		│		├── img
+│		│		│		├── cc
+│		│		│		│		├── by-nc-nd.png
+│		│		│		│		├── by-nc-sa.png
+│		│		│		│		├── by-nc.png
+│		│		│		│		├── by-nd.png
+│		│		│		│		├── by-sa.png
+│		│		│		│		└── by.png
+│		│		│		├── profile_license.txt
+│		│		│		└── profile.png
+│		│		├── isso
+│		│		│		└── isso.min.js
+│		│		├── pygments
+│		│		│		├── abap.css
+│		│		│		├── abap.min.css
+│		│		│		├── algol_nu.css
+│		│		│		├── algol_nu.min.css
+│		│		│		├── algol.css
+│		│		│		├── algol.min.css
+│		│		│		├── arduino.css
+│		│		│		├── arduino.min.css
+│		│		│		├── autumn.css
+│		│		│		├── autumn.min.css
+│		│		│		├── borland.css
+│		│		│		├── borland.min.css
+│		│		│		├── bw.css
+│		│		│		├── bw.min.css
+│		│		│		├── colorful.css
+│		│		│		├── colorful.min.css
+│		│		│		├── default.css
+│		│		│		├── default.min.css
+│		│		│		├── emacs.css
+│		│		│		├── emacs.min.css
+│		│		│		├── friendly.css
+│		│		│		├── friendly.min.css
+│		│		│		├── fruity.css
+│		│		│		├── fruity.min.css
+│		│		│		├── github.css
+│		│		│		├── github.min.css
+│		│		│		├── igor.css
+│		│		│		├── igor.min.css
+│		│		│		├── inkpot.css
+│		│		│		├── inkpot.min.css
+│		│		│		├── lovelace.css
+│		│		│		├── lovelace.min.css
+│		│		│		├── manni.css
+│		│		│		├── manni.min.css
+│		│		│		├── monokai.css
+│		│		│		├── monokai.min.css
+│		│		│		├── murphy.css
+│		│		│		├── murphy.min.css
+│		│		│		├── native.css
+│		│		│		├── native.min.css
+│		│		│		├── paraiso-dark.css
+│		│		│		├── paraiso-dark.min.css
+│		│		│		├── paraiso-light.css
+│		│		│		├── paraiso-light.min.css
+│		│		│		├── pastie.css
+│		│		│		├── pastie.min.css
+│		│		│		├── perldoc.css
+│		│		│		├── perldoc.min.css
+│		│		│		├── rainbow_dash.css
+│		│		│		├── rainbow_dash.min.css
+│		│		│		├── rrt.css
+│		│		│		├── rrt.min.css
+│		│		│		├── sas.css
+│		│		│		├── sas.min.css
+│		│		│		├── solarized-dark.css
+│		│		│		├── solarized-dark.min.css
+│		│		│		├── solarized-light.css
+│		│		│		├── solarized-light.min.css
+│		│		│		├── stata-dark.css
+│		│		│		├── stata-dark.min.css
+│		│		│		├── stata-light.css
+│		│		│		├── stata-light.min.css
+│		│		│		├── stata.css
+│		│		│		├── stata.min.css
+│		│		│		├── tango.css
+│		│		│		├── tango.min.css
+│		│		│		├── trac.css
+│		│		│		├── trac.min.css
+│		│		│		├── vim.css
+│		│		│		├── vim.min.css
+│		│		│		├── vs.css
+│		│		│		├── vs.min.css
+│		│		│		├── xcode.css
+│		│		│		└── xcode.min.css
+│		│		├── stork
+│		│		│		├── stork.css
+│		│		│		├── stork.js
+│		│		│		└── stork.wasm
+│		│		├── stylesheet
+│		│		│		├── dark-theme.less
+│		│		│		├── dark-theme.min.css
+│		│		│		├── style.less
+│		│		│		├── style.min.css
+│		│		│		└── variables.less
+│		│		└── tipuesearch
+│		│		    ├── jquery.min.js
+│		│		    ├── tipuesearch_set.min.js
+│		│		    ├── tipuesearch.min.css
+│		│		    └── tipuesearch.min.js
+│		└── writing
+│		    └── index.html
+├── package-lock.json
+├── package.json
+├── pelicanconf.py
+├── publications
+│		├── publications.bib
+│		├── style.csl
+│		└── templates
+│		    └── pub_list.md
+├── publishconf.py
+├── README.md
+├── releases
+│		├── p1
+│		├── p2
+│		├── p3
+│		├── p4
+│		└── p5
+├── requirements.txt
+├── resources
+│		├── samples
+│		└── thumbnails
+├── scripts
+│		├── build_viz_svg.py
+│		├── gen_cover_thumbs.py
+│		├── gen_search_index.py
+│		├── gen_social_og.py
+│		├── profile_metrics_snapshot.py
+│		└── validate_leaderboard.js
+├── static
+│		├── css
+│		│		├── components.css
+│		│		├── dark.css
+│		│		├── print.css
+│		│		└── tokens.css
+│		├── fonts
+│		├── img
+│		│		├── brand
+│		│		│		├── bullet-header-1.png
+│		│		│		├── bullet-header-1.svg
+│		│		│		├── bullet-header-2.png
+│		│		│		├── bullet-header-2.svg
+│		│		│		├── bullet-header-3.png
+│		│		│		├── bullet-header-3.svg
+│		│		│		├── bullet-header-4.png
+│		│		│		├── bullet-header-4.svg
+│		│		│		├── bullet-header-5.png
+│		│		│		└── bullet-header-5.svg
+│		│		├── placeholders
+│		│		└── social
+│		├── js
+│		│		├── giscus.js
+│		│		├── leaderboard.js
+│		│		├── lunr.min.js
+│		│		├── search.js
+│		│		└── theme-toggle.js
+│		└── manifest.webmanifest
+├── tasks.py
+├── themes
+│		├── Flex
+│		│		├── CHANGELOG.md
+│		│		├── docs
+│		│		│		├── content
+│		│		│		│		├── articles
+│		│		│		│		│		├── flex-pelican-theme-1-1-1.md
+│		│		│		│		│		├── flex-pelican-theme-1-1.md
+│		│		│		│		│		├── flex-pelican-theme-1-2.md
+│		│		│		│		│		├── flex-pelican-theme-2-0.md
+│		│		│		│		│		├── flex-pelican-theme-2-1.md
+│		│		│		│		│		├── flex-pelican-theme-2-2.md
+│		│		│		│		│		├── flex-pelican-theme-2-3.md
+│		│		│		│		│		├── flex-pelican-theme-2-4.md
+│		│		│		│		│		├── flex-pelican-theme-2-5.md
+│		│		│		│		│		└── flex-pelican-theme.md
+│		│		│		│		├── extra
+│		│		│		│		│		├── ads.txt
+│		│		│		│		│		└── CNAME
+│		│		│		│		├── images
+│		│		│		│		│		└── flex-screenshot.png
+│		│		│		│		└── pages
+│		│		│		│		    ├── about.md
+│		│		│		│		    └── contact.md
+│		│		│		├── Makefile
+│		│		│		├── pelicanconf.py
+│		│		│		├── publishconf.py
+│		│		│		├── README.md
+│		│		│		├── requirements.txt
+│		│		│		└── tasks.py
+│		│		├── gulpfile.js
+│		│		├── LICENSE
+│		│		├── package.json
+│		│		├── pygments
+│		│		│		├── generate.py
+│		│		│		├── README.md
+│		│		│		└── requirements.txt
+│		│		├── README.md
+│		│		├── screenshot.png
+│		│		├── static
+│		│		│		├── dark-theme
+│		│		│		│		├── dark-theme.js
+│		│		│		│		└── dark-theme.min.js
+│		│		│		├── font-awesome
+│		│		│		│		├── css
+│		│		│		│		│		├── brands.css
+│		│		│		│		│		├── fontawesome.css
+│		│		│		│		│		└── solid.css
+│		│		│		│		└── webfonts
+│		│		│		│		    ├── fa-brands-400.ttf
+│		│		│		│		    ├── fa-brands-400.woff2
+│		│		│		│		    ├── fa-regular-400.ttf
+│		│		│		│		    ├── fa-regular-400.woff2
+│		│		│		│		    ├── fa-solid-900.ttf
+│		│		│		│		    ├── fa-solid-900.woff2
+│		│		│		│		    ├── fa-v4compatibility.ttf
+│		│		│		│		    └── fa-v4compatibility.woff2
+│		│		│		├── img
+│		│		│		│		├── cc
+│		│		│		│		│		├── by-nc-nd.png
+│		│		│		│		│		├── by-nc-sa.png
+│		│		│		│		│		├── by-nc.png
+│		│		│		│		│		├── by-nd.png
+│		│		│		│		│		├── by-sa.png
+│		│		│		│		│		└── by.png
+│		│		│		│		├── profile_license.txt
+│		│		│		│		└── profile.png
+│		│		│		├── isso
+│		│		│		│		└── isso.min.js
+│		│		│		├── pygments
+│		│		│		│		├── abap.css
+│		│		│		│		├── abap.min.css
+│		│		│		│		├── algol_nu.css
+│		│		│		│		├── algol_nu.min.css
+│		│		│		│		├── algol.css
+│		│		│		│		├── algol.min.css
+│		│		│		│		├── arduino.css
+│		│		│		│		├── arduino.min.css
+│		│		│		│		├── autumn.css
+│		│		│		│		├── autumn.min.css
+│		│		│		│		├── borland.css
+│		│		│		│		├── borland.min.css
+│		│		│		│		├── bw.css
+│		│		│		│		├── bw.min.css
+│		│		│		│		├── colorful.css
+│		│		│		│		├── colorful.min.css
+│		│		│		│		├── default.css
+│		│		│		│		├── default.min.css
+│		│		│		│		├── emacs.css
+│		│		│		│		├── emacs.min.css
+│		│		│		│		├── friendly.css
+│		│		│		│		├── friendly.min.css
+│		│		│		│		├── fruity.css
+│		│		│		│		├── fruity.min.css
+│		│		│		│		├── github.css
+│		│		│		│		├── github.min.css
+│		│		│		│		├── igor.css
+│		│		│		│		├── igor.min.css
+│		│		│		│		├── inkpot.css
+│		│		│		│		├── inkpot.min.css
+│		│		│		│		├── lovelace.css
+│		│		│		│		├── lovelace.min.css
+│		│		│		│		├── manni.css
+│		│		│		│		├── manni.min.css
+│		│		│		│		├── monokai.css
+│		│		│		│		├── monokai.min.css
+│		│		│		│		├── murphy.css
+│		│		│		│		├── murphy.min.css
+│		│		│		│		├── native.css
+│		│		│		│		├── native.min.css
+│		│		│		│		├── paraiso-dark.css
+│		│		│		│		├── paraiso-dark.min.css
+│		│		│		│		├── paraiso-light.css
+│		│		│		│		├── paraiso-light.min.css
+│		│		│		│		├── pastie.css
+│		│		│		│		├── pastie.min.css
+│		│		│		│		├── perldoc.css
+│		│		│		│		├── perldoc.min.css
+│		│		│		│		├── rainbow_dash.css
+│		│		│		│		├── rainbow_dash.min.css
+│		│		│		│		├── rrt.css
+│		│		│		│		├── rrt.min.css
+│		│		│		│		├── sas.css
+│		│		│		│		├── sas.min.css
+│		│		│		│		├── solarized-dark.css
+│		│		│		│		├── solarized-dark.min.css
+│		│		│		│		├── solarized-light.css
+│		│		│		│		├── solarized-light.min.css
+│		│		│		│		├── stata-dark.css
+│		│		│		│		├── stata-dark.min.css
+│		│		│		│		├── stata-light.css
+│		│		│		│		├── stata-light.min.css
+│		│		│		│		├── stata.css
+│		│		│		│		├── stata.min.css
+│		│		│		│		├── tango.css
+│		│		│		│		├── tango.min.css
+│		│		│		│		├── trac.css
+│		│		│		│		├── trac.min.css
+│		│		│		│		├── vim.css
+│		│		│		│		├── vim.min.css
+│		│		│		│		├── vs.css
+│		│		│		│		├── vs.min.css
+│		│		│		│		├── xcode.css
+│		│		│		│		└── xcode.min.css
+│		│		│		├── stork
+│		│		│		│		├── stork.css
+│		│		│		│		├── stork.js
+│		│		│		│		└── stork.wasm
+│		│		│		├── stylesheet
+│		│		│		│		├── dark-theme.less
+│		│		│		│		├── dark-theme.min.css
+│		│		│		│		├── style.less
+│		│		│		│		├── style.min.css
+│		│		│		│		└── variables.less
+│		│		│		└── tipuesearch
+│		│		│		    ├── jquery.min.js
+│		│		│		    ├── tipuesearch_set.min.js
+│		│		│		    ├── tipuesearch.min.css
+│		│		│		    └── tipuesearch.min.js
+│		│		├── templates
+│		│		│		├── archives.html
+│		│		│		├── article.html
+│		│		│		├── author.html
+│		│		│		├── authors.html
+│		│		│		├── base.html
+│		│		│		├── categories.html
+│		│		│		├── category.html
+│		│		│		├── index.html
+│		│		│		├── page.html
+│		│		│		├── partial
+│		│		│		│		├── addthis.html
+│		│		│		│		├── cc_license.html
+│		│		│		│		├── cf_analytics.html
+│		│		│		│		├── clarity.html
+│		│		│		│		├── color.html
+│		│		│		│		├── copyright.html
+│		│		│		│		├── disqus.html
+│		│		│		│		├── feed.html
+│		│		│		│		├── flex.html
+│		│		│		│		├── footer.html
+│		│		│		│		├── ga.html
+│		│		│		│		├── ggst.html
+│		│		│		│		├── github.html
+│		│		│		│		├── gtm_noscript.html
+│		│		│		│		├── gtm.html
+│		│		│		│		├── guages.html
+│		│		│		│		├── icon.html
+│		│		│		│		├── isso.html
+│		│		│		│		├── jsonld_article.html
+│		│		│		│		├── jsonld.html
+│		│		│		│		├── matomo.html
+│		│		│		│		├── nav.html
+│		│		│		│		├── neighbors.html
+│		│		│		│		├── og_article.html
+│		│		│		│		├── og.html
+│		│		│		│		├── pagination.html
+│		│		│		│		├── plausible.html
+│		│		│		│		├── share_post.html
+│		│		│		│		├── sidebar.html
+│		│		│		│		├── statuscake.html
+│		│		│		│		├── stork.html
+│		│		│		│		└── translations.html
+│		│		│		├── period_archives.html
+│		│		│		├── search.html
+│		│		│		├── tag.html
+│		│		│		└── tags.html
+│		│		├── tox.ini
+│		│		├── transifex.py
+│		│		├── translate.sh
+│		│		└── translations
+│		│		    ├── babel.cfg
+│		│		    ├── cs
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── de
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── en
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── es
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── es_ES
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── et
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── fa_IR
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── fi_FI
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── fr
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── hu_HU
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── id
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── it
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── messages.pot
+│		│		    ├── nl_NL
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── pl_PL
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── pt
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── pt_BR
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── pt_PT
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── ro_RO
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── ru
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    ├── tr_TR
+│		│		    │		└── LC_MESSAGES
+│		│		    │		    ├── messages.mo
+│		│		    │		    └── messages.po
+│		│		    └── zh_CN
+│		│		        └── LC_MESSAGES
+│		│		            ├── messages.mo
+│		│		            └── messages.po
+│		└── GusmaoLab
+│		    ├── macros
+│		    ├── static
+│		    └── templates
+│		        ├── archives.html
+│		        ├── article.html
+│		        ├── base.html
+│		        ├── challenges.html
+│		        ├── index.html
+│		        ├── page.html
+│		        ├── projects.html
+│		        ├── publications.html
+│		        ├── resources.html
+│		        ├── search.html
+│		        ├── series.html
+│		        ├── styleguide.html
+│		        ├── tag.html
+│		        └── talks.html
+├── tree.txt
+├── treecloc.sh
+└── viz
+    ├── data
+    └── svg
