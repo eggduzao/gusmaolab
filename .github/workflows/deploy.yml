@@ -47,7 +47,7 @@ jobs:
           find output/images -maxdepth 4 -type f || true
 
       - name: 🚀 Deploy to GitHub Pages (external repo)
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
           external_repository: eggduzao/eggduzao.github.io
@@ -55,3 +55,12 @@ jobs:
           publish_dir: ./output
           user_name: "eggduzao"
           user_email: "eggduzao@gmail.com"
+          force_orphan: true
+
+      - name: ✅ Verify output payload
+        run: |
+          test -d output/images
+          echo "Output images count:"
+          find output/images -type f | wc -l
+          echo "Sample:"
+          find output/images -type f | head -n 20
