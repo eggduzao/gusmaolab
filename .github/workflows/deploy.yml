@@ -28,9 +28,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install pelican markdown typogrify
 
+      - name: 🔎 Debug list content images
+        run: |
+          echo "=== content tree (images) ==="
+          ls -la content || true
+          ls -la content/images || true
+          find content/images -maxdepth 3 -type f || true
+
       - name: 🛠️ Build the site
         run: |
           pelican content -s pelicanconf.py -o output --delete-output-directory
+
+      - name: 🔎 Debug list output images
+        run: |
+          echo "=== output tree (images) ==="
+          ls -la output || true
+          ls -la output/images || true
+          find output/images -maxdepth 4 -type f || true
 
       - name: 🚀 Deploy to GitHub Pages (external repo)
         uses: peaceiris/actions-gh-pages@v3
