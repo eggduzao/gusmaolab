@@ -35,6 +35,7 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {
     "extra/CV.pdf": {"path": "CV.pdf"},
     "extra/CNAME": {"path": "CNAME"},
+    "extra/css/tokens.css": {"path": "static/css/tokens.css"},
 }
 
 # Override templates from the theme
