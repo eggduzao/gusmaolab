@@ -4,7 +4,7 @@ Date: 2026-01-01 10:00
 Modified: 2026-01-01 10:00
 Category: One-Pager
 Tags: machine-learning, bioinformatics, python, ai, science
-Slug: one-pager-template
+Slug: article-vl-jepa
 Authors: Eduardo Gusmao
 Summary: A concise, high-signal technical note focusing on one idea, tool, paper, or concept.
 Status: draft
