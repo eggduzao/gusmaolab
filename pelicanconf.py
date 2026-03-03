@@ -28,12 +28,12 @@ PAGE_PATHS = ["pages"]
 # Static paths
 STATIC_PATHS = [
     "images",
-    "extra/Gusmao_EG_CV.pdf",
+    "extra/CV_Gusmao_Eduardo.pdf",
     "extra/CNAME",
 ]
 
 EXTRA_PATH_METADATA = {
-    "extra/Gusmao_EG_CV.pdf": {"path": "CV_Gusmao_Eduardo.pdf"},
+    "extra/CV_Gusmao_Eduardo.pdf": {"path": "CV_Gusmao_Eduardo.pdf"},
     "extra/CNAME": {"path": "CNAME"},
     "extra/css/tokens.css": {"path": "static/css/tokens.css"},
 }
