@@ -33,7 +33,7 @@ STATIC_PATHS = [
 ]
 
 EXTRA_PATH_METADATA = {
-    "extra/Gusmao_EG_CV.pdf": {"path": "Gusmao_EG_CV.pdf"},
+    "extra/Gusmao_EG_CV.pdf": {"path": "CV_Gusmao_Eduardo.pdf"},
     "extra/CNAME": {"path": "CNAME"},
     "extra/css/tokens.css": {"path": "static/css/tokens.css"},
 }
