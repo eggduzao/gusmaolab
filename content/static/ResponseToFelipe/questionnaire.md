@@ -1,3 +1,7 @@
+Title: Questionnaire
+Slug: questionnaire
+Date: 2026-03-29
+
 # Eduardo Gusmao
 
 > Recife, Brazil | +5581981052040 | eduardo@gusmaolab.org | linkedin.com/in/eduardogade | github.com/eggduzao
