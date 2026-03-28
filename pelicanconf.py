@@ -30,6 +30,7 @@ STATIC_PATHS = [
     "images",
     "extra/CV_Gusmao_Eduardo.pdf",
     "extra/CNAME",
+    "static",
 ]
 
 EXTRA_PATH_METADATA = {
