@@ -37,6 +37,7 @@ EXTRA_PATH_METADATA = {
     "extra/CV_Gusmao_Eduardo.pdf": {"path": "cv/CV_Gusmao_Eduardo.pdf"},
     "extra/CNAME": {"path": "CNAME"},
     "extra/css/tokens.css": {"path": "static/css/tokens.css"},
+    "extra/css/dark.css": {"path": "static/css/dark.css"},
 }
 
 # Override templates from the theme
@@ -44,7 +45,7 @@ EXTRA_PATH_METADATA = {
 
 # Where Pelican will put theme static files in the output
 THEME_STATIC_DIR = "theme"
-CUSTOM_CSS = "static/css/tokens.css"
+CUSTOM_CSS = "static/css/dark.css"
 
 # Site structure
 PAGE_URL = "{slug}/"

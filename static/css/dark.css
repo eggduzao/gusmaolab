@@ -1,0 +1,75 @@
+/* Code block container */
+pre {
+    background: #111827;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+}
+
+/* Inline code */
+code {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f3f4f6;
+    padding: 0.15rem 0.35rem;
+    border-radius: 6px;
+}
+
+/* Code inside fenced blocks should not inherit inline styling */
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Pygments token fallbacks */
+.highlight {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+.highlight .k,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .ow {
+    color: #c792ea;
+}
+
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s1,
+.highlight .s2 {
+    color: #ecc48d;
+}
+
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+    color: #7f8c98;
+    font-style: italic;
+}
+
+.highlight .n,
+.highlight .nx,
+.highlight .nf,
+.highlight .nc {
+    color: #82aaff;
+}
+
+.highlight .o,
+.highlight .p {
+    color: #89ddff;
+}
+
+.highlight .mi,
+.highlight .mf,
+.highlight .il {
+    color: #f78c6c;
+}
