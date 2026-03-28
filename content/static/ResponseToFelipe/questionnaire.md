@@ -142,13 +142,13 @@ I will use lists when I want:
 - A sequence of items
 - Order matters
 - Duplicate items are allowed
-- I want to iterate them IN BATCH.
+- I want to iterate them IN BATCH
 
 I will use dictionaries when I want:
 - Quick key-based access
-- I am representing ENTITIES like a record.
-- I want to avoid linear-time (𝒪(n)) search.
-- I need structure, e.g. JSON or YAML.
+- I am representing ENTITIES like a record
+- I want to avoid linear-time (𝒪(n)) search
+- I need structure, e.g. JSON or YAML
 
 ---
 
