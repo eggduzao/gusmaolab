@@ -51,9 +51,9 @@ And if this is happening because of a pipeline bug, I would not stop at the quer
 
 ---
 
-2. You are writing a query on a 500 GB BigQuery table. What do you check to make sure it will not perform a full table scan?
+### 2. You are writing a query on a 500 GB BigQuery table. What do you check to make sure it will not perform a full table scan?
 
-2.A. Short - Spoken Answer
+**2.A. Short - Spoken Answer**
 
 The first thing I check is whether the table is partitioned, because in BigQuery the main protection against a full scan is partition pruning.
 
@@ -63,7 +63,7 @@ Third, I check the query itself for anti-patterns, such as unnecessary ``SELECT 
 
 Finally, I would use the query validator dry run, as this gives me a quick cost and performance sanity check.
 
-2.B. Detailed Answer
+**2.B. Detailed Answer**
 
 First: Check if Table Is Partitioned
 So I look at how the table is partitioned - for example by event_date or ingestion_date - and make sure my WHERE clause filters directly on that partition column. If I don't filter on it, or if I wrap it in a function in a way that prevents pruning, BigQuery may scan far more data than necessary.
