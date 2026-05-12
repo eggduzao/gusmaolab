@@ -1,6 +1,6 @@
 # Metadata
 SITENAME = "Gusmao Lab"
-SITESUBTITLE = "Computational Biology • AI • Writing"
+SITESUBTITLE = "Data Engineering • AI • Computational Biology • Writing"
 SITEURL = ""  # In main
 TIMEZONE = "America/Recife"
 DEFAULT_LANG = "en"
@@ -9,7 +9,7 @@ THEME = "themes/Flex"
 
 # SideBar Bio
 AUTHOR = "Eduardo Gade Gusmao"
-TAGLINE = "Bioinformatician, Professor and AI/ML/DL Researcher"
+TAGLINE = "Senior Data Engineer"
 SITELOGO = "/images/brand/website-128.png"
 FAVICON = "/images/favicons/website-favicon.ico"
 
@@ -63,7 +63,7 @@ ARTICLE_SAVE_AS = "blog/{slug}/index.html"
 # Social links (use your links or placeholders)
 SOCIAL = (
     ("GitHub", "https://github.com/eggduzao"),
-    ("LinkedIn", "https://www.linkedin.com/in/eduardogadegusmao/"),
+    ("LinkedIn", "https://www.linkedin.com/in/eduardogade/"),
     ("ResearchGate", "https://www.researchgate.net/profile/Eduardo-Gusmao"),
     ("ORCID", "https://orcid.org/0000-0001-7461-1443"),
     ("Instagram", "https://instagram.com/eduardo.gade.gusmao.lab"),
@@ -80,6 +80,7 @@ MENUITEMS = (
     ("Portfolio", "/portfolio/"),
     ("Blog", "/category/blog.html"),
     ("About", "/about/"),
+    ("Writing", "/writing/"),
     ("Contact", "/contact/"),
 )
 

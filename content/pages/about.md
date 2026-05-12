@@ -1,15 +1,20 @@
 Title: About
 Slug: about
 Date: 2025-11-10
+Summary: Data Engineer and Data Platform Engineer with a background in machine learning, bioinformatics, healthcare data, and large-scale scientific systems.
 
-## Website under Construction
+## About
 
-Meanwhile,
+**Eduardo Gade Gusmão, Ph.D.** is a Data Engineer and Data Platform Engineer with 8+ years of experience building scalable data platforms, distributed pipelines, and production-grade data systems across healthcare, life sciences, genomics, and research-intensive environments.
 
-**Eduardo Gade Gusmão, Ph.D.** is a computational biologist and machine learning specialist with a strong track record in developing scalable, high-impact solutions across genomics, AI, and data-intensive scientific applications. His work combines deep learning, probabilistic modeling, and modern bioinformatics to build tools, pipelines, and models that transform complex biological datasets into actionable insights.
+His work focuses on the full data lifecycle: ingestion, transformation, validation, modeling, orchestration, documentation, observability, and delivery of analytics-ready and machine-learning-ready datasets. He has built systems that integrate heterogeneous sources such as clinical records, phenotypic data, genomic outputs, operational data, APIs, structured files, and scientific metadata — turning fragmented real-world data into reliable platforms for downstream analysis, BI, and ML workflows.
 
-Eduardo’s background spans chromatin biology, multi-omics integration, and the design of ML-driven analytical frameworks for large-scale population and single-cell data. He has contributed to research and software efforts at leading institutions in Brazil, Germany, and the United States, and has collaborated with teams across academia, biotech, and translational research.
+Eduardo’s technical background combines **Python**, **SQL**, **PySpark/Spark**, **cloud and hybrid infrastructure**, **workflow orchestration**, **data modeling**, **data quality**, **CI/CD**, and **containerized workloads**. His experience includes data lake and lakehouse-style architectures, distributed processing, semantic and dimensional modeling, API-driven integrations, reproducible pipelines, and performance optimization for large-scale analytical systems.
 
-He is particularly interested in **AI for genomics**, **computational modeling of chromatin structure**, and **next-generation biomarkers informed by 3D genome architecture and multi-omics signals**. Beyond fundamental research, he focuses on building practical, production-ready tools and algorithms that support real-world applications in precision genomics, aging biology, and therapeutic development.
+Before focusing primarily on Data Engineering, Eduardo trained deeply in **Machine Learning**, **Deep Learning**, and **Computational Biology**, including advanced work in regulatory genomics, immunogenomics, chromatin biology, and multi-omics data. That background still shapes his engineering style: he is especially interested in data platforms that support machine learning, scientific discovery, precision medicine, and complex decision-making under real-world data constraints.
 
-His broader goal is to bridge scientific depth with engineering rigor — creating systems, models, and software that make biological data more interpretable, scalable, and impactful.
+Across roles in Brazil, Germany, Finland, and the United States, Eduardo has worked with interdisciplinary teams spanning engineering, analytics, research, medicine, biology, and product-oriented stakeholders. He is strongest in environments where data is messy, requirements are ambiguous, and the work requires both technical depth and clear communication.
+
+Today, his professional focus is on building **reliable data platforms**: systems that make data easier to trust, inspect, reuse, and scale. He is particularly interested in roles involving **Data Engineering**, **Data Platform Engineering**, **Analytics Engineering**, **ML-aware data infrastructure**, and **healthcare / life sciences data systems**.
+
+In short: Eduardo builds the data foundations that let other people do serious work — analysts, scientists, engineers, machine learning teams, and decision-makers who need data they can actually rely on.
