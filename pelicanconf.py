@@ -30,11 +30,19 @@ STATIC_PATHS = [
     "images",
     "extra/CV_Eduardo_Gusmao.pdf",
     "extra/CNAME",
+    "extra/Eduardo_Introduction_Exomindset.mp4",
+    "extra/Eduardo_Introduction_Dexian.mp4",
     "static",
 ]
 
 EXTRA_PATH_METADATA = {
     "extra/CV_Eduardo_Gusmao.pdf": {"path": "cv/CV_Eduardo_Gusmao.pdf"},
+    "extra/Eduardo_Introduction_Exomindset.mp4": {
+        "path": "cv/Eduardo_Introduction_Exomindset.pdf"
+    },
+    "extra/Eduardo_Introduction_Dexian.mp4": {
+        "path": "cv/Eduardo_Introduction_Dexian.pdf"
+    },
     "extra/CNAME": {"path": "CNAME"},
     "extra/css/tokens.css": {"path": "static/css/tokens.css"},
     "extra/css/dark.css": {"path": "static/css/dark.css"},
