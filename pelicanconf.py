@@ -38,10 +38,10 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {
     "extra/CV_Eduardo_Gusmao.pdf": {"path": "cv/CV_Eduardo_Gusmao.pdf"},
     "extra/Eduardo_Introduction_Exomindset.mp4": {
-        "path": "cv/Eduardo_Introduction_Exomindset.pdf"
+        "path": "cv/Eduardo_Introduction_Exomindset.mp4"
     },
     "extra/Eduardo_Introduction_Dexian.mp4": {
-        "path": "cv/Eduardo_Introduction_Dexian.pdf"
+        "path": "cv/Eduardo_Introduction_Dexian.mp4"
     },
     "extra/CNAME": {"path": "CNAME"},
     "extra/css/tokens.css": {"path": "static/css/tokens.css"},
