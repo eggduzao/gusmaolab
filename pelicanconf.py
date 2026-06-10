@@ -49,7 +49,7 @@ EXTRA_PATH_METADATA = {
 }
 
 # Override templates from the theme
-# THEME_TEMPLATES_OVERRIDES = ["themes /GusmaoLab/templates"]
+# THEME_TEMPLATES_OVERRIDES = ["themes/GusmaoLab/templates"]
 
 # Where Pelican will put theme static files in the output
 THEME_STATIC_DIR = "theme"
